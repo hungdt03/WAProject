@@ -5,6 +5,7 @@
 }
 
 header {
+    position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
@@ -45,11 +46,17 @@ header {
 
 /* HEADER CENTER */
 
+.header__center {
+    background-color: #00917a;
+}
+
+
 .header__center-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    color: #fff;
 }
 
 
@@ -63,8 +70,7 @@ header {
     background-color: #fff;
     border-radius: 15px;
     padding: 5px 10px;
-    box-shadow: 0 4px 6px #ccc;
-    
+   
 }
 
 .header__center-search-input {
@@ -76,12 +82,11 @@ header {
 
 .header__center-search-btn {
     position: absolute;
-    box-shadow: 0 4px 6px #ccc;
     right: 3px;
     top: -7px;
     background-color: var(--primary-color);
     background: linear-gradient(#00917a,#00483d);
-    border-radius: 18px;
+    border-radius: 15px;
     width: 42px;
     height: 42px;
     font-size: 16px;
@@ -98,19 +103,17 @@ header {
     position: relative;
     width: 130px;
     display: flex;
-    background-color: #00483e;
+    background-color: #fff;
     border-radius: 10px;
     padding: 4px 8px;
-    box-shadow: 0 4px 6px #ccc;
-    color: #fff;
+    color: var(--primary-color);
     font-size: 12px;
     margin-right: 30px;
     
 }
 
 .header__center-check-order-link:hover {
-    color: #fff;
-    background-color: #009981;
+    color: var(--primary-color);
 }
 
 .header__center-check-order-link .icon {
@@ -134,12 +137,12 @@ header {
 
 .header__center-cart-link i {
     font-size: 34px;
-    color: black;
+    color: #fff;
     
 }
 
 .header__center-cart-link i:hover {
-    color: #009981;
+    color: #fff;
 }
 
 .header__center-cart {
@@ -271,9 +274,54 @@ header {
 
 /* SLIDER================== */
 
-#slider {
-    margin-top: 20px;
+#container {
+    margin-top: 132px;
 }
+
+#category {
+    position: relative;
+    overflow: hidden;
+}
+
+.category__wrapper {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    /* position: fixed;
+    top: 132px;
+    right: auto; */
+}
+
+.category__item {  
+    color: #000;
+}
+
+.category__heading {
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 4px solid var(--primary-color);
+    background-color: #fff;
+}
+
+.category__item-list {
+    margin-top: 10px;
+}
+
+.category__item-list-li {
+    padding: 4px 0 4px 20px;
+    
+}
+
+.category__item-list-li a{
+    color: #000;
+
+
+}
+
+.category__item-list-li:hover {
+    background-color: #ece9e9;
+}
+
 
 #slider .image-slider {
     width: 100%;

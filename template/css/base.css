@@ -22,10 +22,12 @@ button, input {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 a:hover {
     text-decoration: none;
+    color: #000;
 }
 
 
@@ -61,4 +63,17 @@ a:hover {
 
 .sub-primary-color {
     background-color: #00917a !important;
+}
+
+
+
+.container {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1300px !important;
+    }
 }
