@@ -12,6 +12,7 @@
 ul, ol {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 button, input {
@@ -25,4 +26,16 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+
+.section-margin-top {
+    margin-top: 28px;
+}
+
+.fixed-scroll-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
