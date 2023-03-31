@@ -39,3 +39,26 @@ a:hover {
     left: 0;
     right: 0;
 }
+
+.container {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+
+.product__container-item {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+
+.product__container-inner .product__container-fix {
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+}
+
+.primary-color {
+    background-color: var(--primary-color) !important;
+}
+
+.sub-primary-color {
+    background-color: #00917a !important;
+}
