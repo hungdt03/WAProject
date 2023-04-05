@@ -1,6 +1,36 @@
 :root {
-    --primary-color: #00483d;
+    /* --primary-color: #e3d8d8; */
+    --primary-color: #800080;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #009a82;
+    --border-color: #dbdbdb;
+    --text-hover: #7fd6cb;
+    --text-footer: #ddddd3;
+
+    /* --header-height: 185px;
+    --navbar-top-height: 30px;
+    --navbar-bot-height: 65px;
+    --header-with-search-height: calc(var(--header-height) - (var(--navbar-top-height) + var(--navbar-bot-height))); */
 }
+* {
+    box-sizing: inherit;
+    font-weight: 400;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.mr-6 {
+    margin-right: 6px;
+}
+
+.mb-6 {
+    margin-bottom: 6px;
+}
+
+
 
 * {
     margin: 0;
@@ -42,9 +72,24 @@ a:hover {
     right: 0;
 }
 
+
+#container {
+    margin-top: 132px;
+    overflow: hidden;
+}
+
+#app {
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
 .container {
     padding-left: 6px !important;
     padding-right: 6px !important;
+}
+
+#container #content {
+    padding: 0;
 }
 
 .product__container-item {
@@ -52,7 +97,7 @@ a:hover {
     padding-right: 6px !important;
 }
 
-.product__container-inner .product__container-fix {
+.product__container-fix {
     margin-left: -12px !important;
     margin-right: -12px !important;
 }
@@ -65,15 +110,60 @@ a:hover {
     background-color: #00917a !important;
 }
 
+/* ========HIDE ON PC========= */
+/* .hide {
+    display: none !important;
+} */
 
 
-.container {
-    padding-left: 6px !important;
-    padding-right: 6px !important;
-}
+/* =================SET SOME CLASSES IN BOOTSTRAP=================== */
 
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 1300px !important;
+        max-width: 1200px !important;
+    }
+}
+
+
+.col-xl-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    width: 100%;
+    padding-right: 6px !important;
+    padding-left: 6px !important;
+}
+
+
+
+
+@media (min-width: 576px) and (max-width: 767px)  {
+    .col-sm-15 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-15 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .col-lg-15 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 1200px) {
+    .col-xl-15 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
     }
 }

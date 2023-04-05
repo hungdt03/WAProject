@@ -1,0 +1,102 @@
+
+
+
+/* footer */
+
+#footer {
+    margin-top: 24px;
+}
+
+#footer .container {
+    background-color: var(--primary-color);
+    box-sizing: border-box;
+    /* max-width: 1200px;
+    width: 1200px; */
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+#footer .footer-items {
+    margin: 0;
+}
+
+#footer .footer-items .col {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 8px 0 0;
+}
+
+#footer .footer-items .col:last-child {
+    padding: 0;
+}
+
+
+#footer .link-content h4 {
+    color: var(--white-color);
+    font-size: 15px;
+    margin: 10px 0 6px 0;
+}
+
+#footer .link-content ul{
+    list-style-type: none;
+    color: var(--text-footer);
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .link-content ul li {
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+#footer .cs-d li{
+    cursor: default !important;
+}
+
+.cs-p {
+    cursor: pointer;
+}
+
+#footer .link-content ul li:hover {
+    color: var(--white-color);
+}
+
+#footer .link-content .btn-sdt {
+    color: var(--text-color);
+    font-weight: bold;
+    background-color: #f4f4f4;
+    font-size: 18px;
+}
+
+#footer .card-pay {
+    display: inline-block;
+    cursor: default;
+}
+
+#footer .card-pay img {
+    border-radius: 4px;
+}
+
+#footer .col,
+#footer .row {
+    margin: 0;
+    padding: 0;
+}
+
+#footer .footer-info {
+    box-sizing: border-box;
+    height: 100px;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer .footer-info p {
+    color: var(--white-color);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
