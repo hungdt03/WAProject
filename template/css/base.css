@@ -1,12 +1,16 @@
 :root {
-    /* --primary-color: #e3d8d8; */
-    --primary-color: #800080;
+    --text-login: #202020;
+    --primary-color: #00483d;
+    /* --primary-color: #800080; */
     --white-color: #fff;
     --black-color: #000;
     --text-color: #009a82;
     --border-color: #dbdbdb;
     --text-hover: #7fd6cb;
     --text-footer: #ddddd3;
+    --btn-hover: #046254;
+    --a-hover: #0bbaa0;
+    --content: rgba(0, 72, 61, 0.6);
 
     /* --header-height: 185px;
     --navbar-top-height: 30px;
@@ -83,10 +87,10 @@ a:hover {
     background-color: #f4f4f4;
 }
 
-.container {
+/* .container {
     padding-left: 6px !important;
     padding-right: 6px !important;
-}
+} */
 
 #container #content {
     padding: 0;

@@ -5,10 +5,11 @@
 
 #footer {
     margin-top: 24px;
+    background-color: var(--primary-color);
+
 }
 
 #footer .container {
-    background-color: var(--primary-color);
     box-sizing: border-box;
     /* max-width: 1200px;
     width: 1200px; */
