@@ -1,7 +1,7 @@
 :root {
     --text-login: #202020;
-    --primary-color: #00483d;
-    /* --primary-color: #800080; */
+    --primary-color: #183544;
+    --sbu-color: #144964;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #009a82;
@@ -11,7 +11,6 @@
     --btn-hover: #046254;
     --a-hover: #0bbaa0;
     --content: rgba(0, 72, 61, 0.6);
-
     /* --header-height: 185px;
     --navbar-top-height: 30px;
     --navbar-bot-height: 65px;
@@ -54,6 +53,10 @@ button, input {
     outline: none;
 }
 
+p {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -77,23 +80,16 @@ a:hover {
 }
 
 
-#container {
-    margin-top: 132px;
-    overflow: hidden;
-}
-
 #app {
     overflow: hidden;
     background-color: #f4f4f4;
 }
 
-/* .container {
-    padding-left: 6px !important;
-    padding-right: 6px !important;
-} */
 
-#container #content {
+
+#content {
     padding: 0;
+    margin-top: 190px;
 }
 
 .product__container-item {
@@ -101,23 +97,19 @@ a:hover {
     padding-right: 6px !important;
 }
 
-.product__container-fix {
-    margin-left: -12px !important;
-    margin-right: -12px !important;
+.col-pd-6 {
+    padding: 0 6px !important;
+    width: 100%;
 }
 
 .primary-color {
     background-color: var(--primary-color) !important;
 }
 
-.sub-primary-color {
+/* .sub-primary-color {
     background-color: #00917a !important;
 }
-
-/* ========HIDE ON PC========= */
-/* .hide {
-    display: none !important;
-} */
+ */
 
 
 /* =================SET SOME CLASSES IN BOOTSTRAP=================== */
@@ -139,7 +131,13 @@ a:hover {
     padding-left: 6px !important;
 }
 
+.no-margin {
+    margin: 0 !important;
+}
 
+.no-padding {
+    padding: 0 !important;
+}
 
 
 @media (min-width: 576px) and (max-width: 767px)  {
@@ -170,4 +168,32 @@ a:hover {
         flex: 0 0 20%;
         max-width: 20%;
     }
+}
+
+
+/* ==============BREADCRUMB=============== */
+
+.breadcrumb__wrapper {
+    padding-bottom: 5px;
+    background-color: cadetblue;
+    margin: 0px 0px 20px 0;
+}
+
+.breadcrumb__list {
+    display: flex;
+    align-items: center;
+
+}
+
+.breadcrumb__list-item {
+    margin: 0 8px;
+}
+
+.breadcrumb__list-item:first-child {
+    margin-left: 0;
+}
+
+.breadcrumb__list-item-link {
+    font-size: 14px;
+    font-weight: 700;
 }

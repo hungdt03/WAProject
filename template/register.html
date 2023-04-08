@@ -1,25 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Link bootstrap 4 and link file fontawesome -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>Đăng ký</title>
 </head>
+
 <body>
-    <!-- CODE REGISTER HERE -->
+    <div id="register">
+
+        <div class="register__head">
+            <div class="register__head-heading">
+                <div class="container register__head-items">
+                    <div class="register__head-item">
+                        <div class="register__head-item-logo"><img src="https://hoanghamobile.com/Content/web/img/logo-text.png" alt=""></div>
+                        <div class="register__head-item-tittle">Đăng ký</div>
+                    </div>
+                    <div class="register__head-item fs-14 mr-15"><a style="color: var(--text-color);" href="">Bạn cần giúp đỡ?</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="container heading">
+                <div style="border-radius: 4px;" class="content__bg">
+                    <div class="form-register">
+                        <div class="temp"></div>
+                        <form action="" class="form" method="get">
+                            <div class="form-register-info">
+                                <div class="form-register-tittle">
+                                    <div class="form-register-tittle-info">
+                                        <div class="tittle-form">Đăng ký</div>
+                                    <div class="tittle-QR"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-register-notes">
+                                    <div style="color: var(--black-color);" class="form-register-note pb-15">Chú ý các nội dung có dấu * bạn cần phải nhập</div>
+                                    <div style="color: red;" class="form-register-note erroInput"></div>
+                                </div>
+    
+                                <div class="form-register-items">
+                                    <input name="taiKhoan" placeholder="Tài khoản *" type="text" class="form-register-input" required>
+                                    <input name="hoTen" placeholder="Họ tên *" type="text" class="form-register-input">
+                                    <input name="matKhau" placeholder="Mật khẩu *" type="text" class="form-register-input">
+                                    <input name="nhapLaiMatKhau" placeholder="Nhập lại mật khẩu *" type="text" class="form-register-input">
+                                    <input name="email" placeholder="Email *" type="text" class="form-register-input">
+                                    <div class="form-register-sex">
+                                        <div class="sex mr-95"><input name="gender" value="Nam" type="radio" class="form-register-sex-check"><p>Nam</p></div>
+                                        <div class="sex"><input name="gender" value="Nữ" type="radio" class="form-register-sex-check"><p>Nữ</p></div>
+                                    </div>
+                                    <input name="namSinh" placeholder="Ngày tháng năm sinh" type="text" class="form-register-input">
+                                    <input name="dienThoai" placeholder="Điện thoại *" type="text" class="form-register-input">
+                                    <input name="diaChi" placeholder="Địa chỉ *" type="text" class="form-register-input">
+                                    <input name="tinh" placeholder="Tỉnh/Thành phố" type="text" class="form-register-input">
+                                    <input name="huyen" placeholder="Quận/Huyện" type="text" class="form-register-input">
+                                    <div class="btn btn-register register-event">ĐĂNG KÝ</div>
+                                    <div class="form-register-other">
+                                        <div class="form-register-other-tittle">
+                                            <div class="form-register-other-tittle-eg"></div>
+                                            <div class="form-register-other-tittle-text">HOẶC</div>
+                                            <div class="form-register-other-tittle-eg"></div>
+
+                                        </div>
+                                        <div class="form-register-other-items">
+                                            <div class="form-register-other-item">
+                                                <p><i class="fa-brands fa-facebook"></i></p>
+                                                <p>Facebook</p>
+                                            </div>
+                                            <div class="form-register-other-item mtr-8px">
+                                                <p><i class="fa-brands fa-google"></i></p>
+                                                <p>Google</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="form-register-link">
+                                    <div class="form-register-link-content">
+                                        <p class="form-register-link-content-label">Bạn đã có tài khoản?</p>
+                                        <a href="./login.html" class="form-register-link-register">Đăng nhập</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div style="margin-top: 0;" id="footer">
+            <div style="border-radius: 0 !important;" class="container">
+                <div class="row footer-items">
+                    <div class="col link-content">
+                        <h4>Hỗ Trợ - Dịch Vụ</h4>
+                        <ul>
+                            <li>Mua hàng trả góp</li>
+                            <li>Hướng dẫn cài đặt và thanh toán</li>
+                            <li>Tra cứu đơn hàng</li>
+                            <li>Chính sách bảo hành</li>
+                            <li>Phạm vi, điều khoản gói bảo hành mở rộng</li>
+                            <li>Chính sách bảo mật</li>
+                            <li>Chính sách giải quyết khiếu nại</li>
+                            <li>Điều khoản mua bán hàng hóa</li>
+                            <li>Câu hỏi thường gặp</li>
+                        </ul>
+                    </div>
+                    <div class="col link-content">
+                        <h4>Thông Tin Liên Hệ</h4>
+                        <ul>
+                            <li>Bán hàng Online</li>
+                            <li>Chăm sóc khách hàng</li>
+                            <li>Hỗ trợ kỹ thuật</li>
+                            <li>Hỗ trợ bảo hành & Sửa chửa</li>
+                            <li>Liên hệ khối văn phòng</li>
+                            <li>Trung tâm bảo hành</li>
+                        </ul>
+                    </div>
+                    <div class="col link-content">
+                        <h4>Hệ Thống 124 Siêu Thị Trên Toàn Quốc</h4>
+                        <ul>
+                            <li>Danh sách 124 siêu thị trên toàn quốc</li>
+                        </ul>
+                    </div>
+                    <div class="col link-content">
+                        <h4>Tổng Đài</h4>
+                        <div class="btn btn-sdt">1900.2091</div>
+                    </div>
+                    <div class="col link-content cs-d">
+                        <h4>Thanh Toán</h4>
+                        <ul>
+                            <li>
+                                <div class="card-pay mr-6 mb-6">
+                                    <img src="./images/logo-visa.png" alt="">
+                                </div>
+                                <div class="card-pay mb-6">
+                                    <img src="./images/logo-master.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-pay mr-6 mb-6">
+                                    <img src="./images/logo-jcb.png" alt="">
+                                </div>
+                                <div class="card-pay mb-6">
+                                    <img src="./images/logo-samsungpay.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-pay mr-6">
+                                    <img src="./images/logo-atm.png" alt="">
+                                </div>
+                                <div class="card-pay">
+                                    <img src="./images/logo-vnpay.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col link-content cs-d">
+                        <h4>Hình Thức Vận Chuyển</h4>
+                        <ul>
+                            <li>
+                                <div class="card-pay mr-6"><img src="./images/nhattin.jpg" alt=""></div>
+                                <div class="card-pay"><img src="./images/vnpost.jpg" alt=""></div>
+                            </li>
+                            <li>
+                                <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img src="./images/logo-bct.png" alt="" class="mt-4 cs-p"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col footer-info">
+                        <p>© 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI HOÀNG HÀ. MST:  0106713191. (Đăng ký lần đầu: Ngày 15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)</p>
+                        <p style="font-weight: bold;">GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</p>
+                        <p>Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Hoàng Mai, Thành Phố Hà Nội, Việt Nam. Điện thoại: 1900.2091. Chịu trách nhiệm nội dung: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let taiKhoan = document.querySelector('input[name="taiKhoan"]');
+        let hoTen = document.querySelector('input[name="hoTen"]');
+        let matKhau = document.querySelector('input[name="matKhau"]');
+        let nhapLaiMatKhau = document.querySelector('input[name="nhapLaiMatKhau"]');
+        let dienThoai = document.querySelector('input[name="dienThoai"]');
+        let diaChi = document.querySelector('input[name="diaChi"]');
+        let email = document.querySelector('input[name="email"]');
+        let gender = document.querySelector('input[name="gender"]');
+        
+        let erro = document.querySelector('.erroInput');
+        let dangKy = document.querySelector('.register-event');
+
+        function checkInfo(){
+            const phonePattern = /^\d{10}$/;
+            var result = "";
+
+            if(taiKhoan.value.trim() === ''){
+                result = "Bạn phải nhập tài khoản";
+            }
+            else if (taiKhoan.value.trim().length < 3 || taiKhoan.value.trim().length > 100){
+                result = "Tài khoản phải có độ dài từ 3 đến 100 ký tự";
+            }
+            else if (hoTen.value.trim() === ''){
+                result = "Bạn phải nhập họ tên";
+            }
+            else if (matKhau.value.trim() === ''){
+                result = "Bạn phải nhập mật khẩu";
+            }
+            else if (nhapLaiMatKhau.value.trim() === ''){
+                result = "Bạn phải nhập lại mật khẩu";
+            }
+            else if (matKhau.value.trim() !== nhapLaiMatKhau.value.trim()){
+                result = "Nhập mật khẩu lại chưa đúng";
+            }
+            else if (email.value.trim() === ''){
+                result = "Bạn phải nhập email";
+            }
+            else if (email.value.trim().length < 10 || email.value.trim().length > 255){
+                result = "Email phải có độ dài từ 10 đến 255 ký tự"
+            }
+            else if (dienThoai.value.trim() === ''){
+                result = "Bạn phải nhập số điện thoại";
+            }
+            else if(!phonePattern.test(dienThoai.value.trim())){
+                result = "Bạn nhập sai số điện thoại";
+            }
+            else if (diaChi.value.trim() === ''){
+                result = "Bạn phải nhập địa chỉ";
+            }
+            else {
+                result = "";
+            }
+            return result;
+        }
+        dangKy.addEventListener('click', function() {
+
+            erro.innerHTML = checkInfo();
+        });
+    </script>
 </body>
-
-<!-- jQuery library -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

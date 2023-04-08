@@ -10,19 +10,25 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/listProduct.css">
     <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>Document</title>
+
+    <style>
+        
+    </style>
 </head>
 <body>
     <div id="app">
         <header>
-            <div class="header__top">
+            <div class="header__top hide-on-tablet-mobile">
                 <div class="container">
                     <ul class="header__top-navigation">
                         <li><a href="#">Giới thiệu</a></li>
                         <li><a href="#">Sản phẩm đã xem</a></li>
                         <li><a href="#">Tra cứu đơn hàng</a></li>
-                        <li><a href="#">Đăng kí</a></li>
-                        <li><a href="#">Đăng nhập</a></li>
+                        <li><a href="./register.html">Đăng kí</a></li>
+                        <li><a href="./login.html">Đăng nhập</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,24 +36,46 @@
             <div class="header__center">
                 <div class="container">
                     <div class="header__center-inner">
+                        <div class="header__menu-bar hide hide-on-pc">
+                            <button>
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
                         <div class="header__center-logo">
-                            <a href="./index.html" class="header__center-log-link">
-                                <img src="./images/logo-text (1).png" alt="" class="header__center-logo-img">
+                            <a href="#" class="header__center-log-link">
+                                <img src="./images/logo-img-removebg-preview.png" alt="" class="header__center-logo-img">
                             </a>
                         </div>
 
-                        <div class="header__center-search">
+                        <div class="header__center-search hide-on-mobile">
                             <div class="header__center-search-wrapper">
                                 <input type="text" class="header__center-search-input"
                                     placeholder="Hôm nay bạn cần tìm gì?">
                                 <button class="header__center-search-btn">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
+
+                                <div class="header__search-history">
+                                    <p class="header__search-history-heading">Lịch sử tìm kiếm</p>
+                                    <ul class="header__search-history-list">
+                                        <li class="header__search-history-list-item">
+                                            <a href="" class="header__search-history-list-item-link">Search 1</a>
+                                        </li>
+                                        <li class="header__search-history-list-item">
+                                            <a href="" class="header__search-history-list-item-link">Search 2</a>
+                                        </li>
+                                        <li class="header__search-history-list-item">
+                                            <a href="" class="header__search-history-list-item-link">Search 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+
+
                         </div>
 
                         <div class="header__center-order">
-                            <div class="header__center-check-order">
+                            <div class="header__center-check-order hide-on-tablet-mobile">
                                 <a class="header__center-check-order-link" href="#">
                                     <span class="icon">
                                         <i class="fa-solid fa-truck-fast"></i>
@@ -68,99 +96,158 @@
                 </div>
             </div>
 
+            <div class="header__bottom hide-on-tablet-mobile">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-pd-6">
+                            <div class="header__category">
+                                <ul class="category__item-list">
+                                    <li class="category__item-list-li"><a href="./listProduct.html">Điện thoại</a></li>
+                                    <li class="category__item-list-li"><a href="./listProduct.html">Laptop</a></li>
+                                    <li class="category__item-list-li"><a href="./listProduct.html">Đồng hồ</a></li>
+                                    <li class="category__item-list-li"><a href="./listProduct.html">Ipad</a></li>
+                                    <li class="category__item-list-li"><a href="./listProduct.html">PC</a></li>
+                                    <li class="category__item-list-li"><a href="./listProduct.html">Smart TV</a></li>
+                                    <li class="category__item-list-li"><a href="./listProduct.html">Tablet</a></li>
+                                    <li class="category__item-list-li"><a href="./listProduct.html">Âm thanh</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-mobile-table hide-on-pc">
+                <div class="header__category">
+                    <h4>Danh mục sản phẩm</h4>
+                    <ul class="category__item-list">
+                        <li class="category__item-list-li"><a href="./listProduct.html">Điện thoại</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Laptop</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Đồng hồ</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Ipad</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">PC</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Smart TV</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Tablet</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Âm thanh</a></li>
+                    </ul>
+
+                    
+                </div>
+
+                <button class="btn-close">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+
         </header>
 
-        <div id="container">
+        <div id="content">
             <div class="container">
-                <div class="breadcrumb__wrapper">
-                    <ul class="breadcrumb__list">
-                        <li class="breadcrumb__list-item"><a href="" class="breadcrumb__list-item-link">Trang chủ</a></li> >
-                        <li class="breadcrumb__list-item"><a href="" class="breadcrumb__list-item-link">Sản phẩm</a></li>
-                    </ul>
+                <div class="col-pd-6">
+                    <div class="breadcrumb__wrapper hide-on-mobile">
+                        <ul class="breadcrumb__list">
+                            <li class="breadcrumb__list-item"><a href="" class="breadcrumb__list-item-link">Trang chủ</a></li> >
+                            <li class="breadcrumb__list-item"><a href="" class="breadcrumb__list-item-link">Sản phẩm</a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col col-xl-3">
-                        
-                        <div class="filter__wrapper">
-                            <h4 class="filter__search">BỘ LỌC TÌM KIẾM</h4>
-                            <div class="filter__item">
-                                <button class="filter__heading" data-toggle="collapse" data-target="#filter1">THƯƠNG HIỆU</button>
-                                <div id="filter1" class="collapse">
-                                    <ul class="filter__item-list">
-                                        <li class="filter__item-list-li"><a href="">Điện thoại</a></li>
-                                        <li class="filter__item-list-li"><a href="">Laptop</a></li>
-                                        <li class="filter__item-list-li"><a href="">Đồng hồ</a></li>
-                                        <li class="filter__item-list-li"><a href="">Ipad</a></li>
-                                        <li class="filter__item-list-li"><a href="">PC</a></li>
-                                        <li class="filter__item-list-li"><a href="">Smart TV</a></li>
-                                        <li class="filter__item-list-li"><a href="">Tablet</a></li>
-                                        <li class="filter__item-list-li"><a href="">Âm thanh</a></li>
-                                    </ul>
+                    <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 hide-on-tablet-mobile">
+                        <div class="col-pd-6">
+                            <div class="filter__wrapper">
+                                <div class="filter__item">
+                                    <button class="filter__heading" data-toggle="collapse" data-target="#filter1">HÃNG SẢN XUẤT</button>
+                                    <div id="filter1" class="collapse">
+                                        <ul class="filter__item-list">
+                                            <li class="filter__item-list-li">
+                                                <input type="checkbox" name="" id="">
+                                                <a href="">Điện thoại</a>
+                                            </li>
+                                            <li class="filter__item-list-li">
+                                                <input type="checkbox" name="" id="">
+                                                <a href="">Laptop</a>
+                                            </li>
+                                            <li class="filter__item-list-li">
+                                                <input type="checkbox" name="" id="">
+                                                <a href="">Đồng hồ</a>
+                                            </li>
+                                            <li class="filter__item-list-li">
+                                                <input type="checkbox" name="" id="">
+                                                <a href="">Ipad</a>
+                                            </li>
+                                            <li class="filter__item-list-li">
+                                                <input type="checkbox" name="" id="">
+                                                <a href="">PC</a>
+                                            </li>
+                                            <li class="filter__item-list-li">
+                                                <input type="checkbox" name="" id="">
+                                                <a href="">Smart TV</a>
+                                            </li>
+                                            <li class="filter__item-list-li">
+                                                <input type="checkbox" name="" id="">
+                                                <a href="">Tablet</a>
+                                            </li>
+                                            <li class="filter__item-list-li">
+                                                <input type="checkbox" name="" id="">
+                                                <a href="">Âm thanh</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-    
-                            <div class="filter__item">
-                                <button class="filter__heading" data-toggle="collapse" data-target="#filter2">GIÁ</button>
-                                <div id="filter2" class="collapse">
-                                    <ul class="filter__item-list">
-                                        <li class="filter__item-list-li"><a href="">Điện thoại</a></li>
-                                        <li class="filter__item-list-li"><a href="">Laptop</a></li>
-                                        <li class="filter__item-list-li"><a href="">Đồng hồ</a></li>
-                                        <li class="filter__item-list-li"><a href="">Ipad</a></li>
-                                        <li class="filter__item-list-li"><a href="">PC</a></li>
-                                        <li class="filter__item-list-li"><a href="">Smart TV</a></li>
-                                        <li class="filter__item-list-li"><a href="">Tablet</a></li>
-                                        <li class="filter__item-list-li"><a href="">Âm thanh</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="filter__item">
-                                <button class="filter__heading" data-toggle="collapse" data-target="#filter3">MÀU SẮC</button>
-                                <div id="filter3" class="collapse">
-                                    <ul class="filter__item-list">
-                                        <li class="filter__item-list-li"><a href="">Điện thoại</a></li>
-                                        <li class="filter__item-list-li"><a href="">Laptop</a></li>
-                                        <li class="filter__item-list-li"><a href="">Đồng hồ</a></li>
-                                        <li class="filter__item-list-li"><a href="">Ipad</a></li>
-                                        <li class="filter__item-list-li"><a href="">PC</a></li>
-                                        <li class="filter__item-list-li"><a href="">Smart TV</a></li>
-                                        <li class="filter__item-list-li"><a href="">Tablet</a></li>
-                                        <li class="filter__item-list-li"><a href="">Âm thanh</a></li>
-                                    </ul>
-                                </div>
+        
                             </div>
                         </div>
                     </div>
         
-                    <div class="col col-xl-9">
-                        <div class="all__product-heading">
-                            <h3 class="all__product-heading-title">ĐIỆN THOẠI APPLE</h3>
-                        </div>
-
-                        <div class="all__product-heading-wrapper">
-                            <div class="all__product-view">
-                                <span class="all__product-view-title">Uư tiên xem: </span>
-                                <ul class="all__product-view-list">
-                                    <li class="all__product-view-list-item">Item 1</li>
-                                    <li class="all__product-view-list-item">Item 1</li>
-                                    <li class="all__product-view-list-item">Item 1</li>
-                                    <li class="all__product-view-list-item">Item 1</li>
-                                </ul>
+                    <div class="col col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                        <div class="col-pd-6">
+                            <div class="all__product-heading">
+                                <h3 class="all__product-heading-title">ĐIỆN THOẠI APPLE</h3>
                             </div>
-
-                            <div class="all__product-sort">
-                                <select name="" id="">
-                                    <option value="">Item</option>
-                                    <option value="">Item</option>
-                                    <option value="">Item</option>
-                                    <option value="">Item</option>
-                                </select>
+    
+                            <div class="all__product-heading-wrapper">
+                                <div class="all__product-view">
+                                    <span class="all__product-view-title">Uư tiên xem: </span>
+                                    <ul class="all__product-view-list">
+                                        <li class="all__product-view-list-item active">Bán chạy nhất</li>
+                                        <li class="all__product-view-list-item">Trả góp 0%</li>
+                                        <li class="all__product-view-list-item">Gía thấp</li>
+                                        <li class="all__product-view-list-item">Gía cao</li>
+                                    </ul>
+                                </div>
+    
+                                <div class="all__product-sort hide-on-mobile">
+                                    <select name="" id="">
+                                        <option value="">Bán chạy nhất</option>
+                                        <option value="">Trả góp 0%</option>
+                                        <option value="">Gía thấp</option>
+                                        <option value="">Gía cao</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="allproduct__wrapper">
-                            <div class="row product__container-fix">
-                                <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                        <div class="allproduct__wrapper container">
+                            <div class="row">
+                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
+                                    <div class="product__container-item-wrapper">
+                                        <a href="./productDetail.html" class="product__container-item-link">
+                                            <div class="product-image">
+                                                <img src="./images/image-removebg-preview-5.webp" alt="">
+                                            </div>
+                                            <div class="product-info">
+                                                <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                    360° 1080P - Chính hãng</a>
+                                                <span class="info-price">
+                                                    <strong>510,000 ₫</strong>
+                                                    <strike>799,000 ₫</strike>
+                                                </span>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
                                     <div class="product__container-item-wrapper">
                                         <a href="#" class="product__container-item-link">
                                             <div class="product-image">
@@ -178,7 +265,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
                                     <div class="product__container-item-wrapper">
                                         <a href="#" class="product__container-item-link">
                                             <div class="product-image">
@@ -196,7 +283,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
                                     <div class="product__container-item-wrapper">
                                         <a href="#" class="product__container-item-link">
                                             <div class="product-image">
@@ -214,7 +301,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
                                     <div class="product__container-item-wrapper">
                                         <a href="#" class="product__container-item-link">
                                             <div class="product-image">
@@ -232,25 +319,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                    <div class="product__container-item-wrapper">
-                                        <a href="#" class="product__container-item-link">
-                                            <div class="product-image">
-                                                <img src="./images/image-removebg-preview-5.webp" alt="">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                    360° 1080P - Chính hãng</a>
-                                                <span class="info-price">
-                                                    <strong>510,000 ₫</strong>
-                                                    <strike>799,000 ₫</strike>
-                                                </span>
-
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
                                     <div class="product__container-item-wrapper">
                                         <a href="#" class="product__container-item-link">
                                             <div class="product-image">
@@ -277,6 +346,101 @@
                                 XEM THÊM SẢN PHẨM
                             </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                <div class="row footer-items">
+            
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content">
+                        <h4>Hỗ Trợ - Dịch Vụ</h4>
+                        <ul>
+                            <li>Mua hàng trả góp</li>
+                            <li>Hướng dẫn cài đặt và thanh toán</li>
+                            <li>Tra cứu đơn hàng</li>
+                            <li>Chính sách bảo hành</li>
+                            <li>Phạm vi, điều khoản gói bảo hành mở rộng</li>
+                            <li>Chính sách bảo mật</li>
+                            <li>Chính sách giải quyết khiếu nại</li>
+                            <li>Điều khoản mua bán hàng hóa</li>
+                            <li>Câu hỏi thường gặp</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content">
+                        <h4>Thông Tin Liên Hệ</h4>
+                        <ul>
+                            <li>Bán hàng Online</li>
+                            <li>Chăm sóc khách hàng</li>
+                            <li>Hỗ trợ kỹ thuật</li>
+                            <li>Hỗ trợ bảo hành & Sửa chửa</li>
+                            <li>Liên hệ khối văn phòng</li>
+                            <li>Trung tâm bảo hành</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content">
+                        <h4>Hệ Thống 124 Siêu Thị Trên Toàn Quốc</h4>
+                        <ul>
+                            <li>Danh sách 124 siêu thị trên toàn quốc</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content">
+                        <h4>Tổng Đài</h4>
+                        <div class="btn btn-sdt">1900.2091</div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content cs-d">
+                        <h4>Thanh Toán</h4>
+                        <ul>
+                            <li>
+                                <div class="card-pay mr-6 mb-6">
+                                    <img src="./images/logo-visa.png" alt="">
+                                </div>
+                                <div class="card-pay mb-6">
+                                    <img src="./images/logo-master.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-pay mr-6 mb-6">
+                                    <img src="./images/logo-jcb.png" alt="">
+                                </div>
+                                <div class="card-pay mb-6">
+                                    <img src="./images/logo-samsungpay.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-pay mr-6">
+                                    <img src="./images/logo-atm.png" alt="">
+                                </div>
+                                <div class="card-pay">
+                                    <img src="./images/logo-vnpay.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content cs-d">
+                        <h4>Hình Thức Vận Chuyển</h4>
+                        <ul>
+                            <li>
+                                <div class="card-pay mr-6"><img src="./images/nhattin.jpg" alt=""></div>
+                                <div class="card-pay"><img src="./images/vnpost.jpg" alt=""></div>
+                            </li>
+                            <li>
+                                <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img
+                                        src="./images/logo-bct.png" alt="" class="mt-4 cs-p"></a>
+                            </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="col footer-info">
+                        <p>© 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI HOÀNG HÀ. MST: 0106713191. (Đăng ký lần
+                            đầu: Ngày 15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)</p>
+                        <p style="font-weight: bold;">GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</p>
+                        <p>Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Hoàng Mai, Thành Phố Hà Nội, Việt Nam.
+                            Điện thoại: 1900.2091. Chịu trách nhiệm nội dung: </p>
                     </div>
                 </div>
             </div>

@@ -18,15 +18,33 @@
 
 <body>
     <div id="app">
-        <div class="menu-bottom-fixed">
-            <ul class="menu-fixed-list">
-                <li class="menu-fixed-item"><a href="" class="menu-fixed-item-link">Trang chủ</a></li>
-                <li class="menu-fixed-item"><a href="" class="menu-fixed-item-link">Danh mục</a></li>
-                <li class="menu-fixed-item"><a href="" class="menu-fixed-item-link">Kiểm tra đơn hàng</a></li>
-                <li class="menu-fixed-item"><a href="./login.html" class="menu-fixed-item-link">Tài khoản</a></li>
-            </ul>
+
+        <div class="fixed-mobile-menu hide-on-tablet hide-on-pc">
+            <div class="fixed-mobile-item">
+                <a href="">Trang chủ</a>
+            </div>
+            <div class="fixed-mobile-item">
+                <a href="">Giỏ hàng</a>
+            </div>
+            <div class="fixed-mobile-item">
+                <a href="">Giới thiệu</a>
+            </div>
+            <div class="fixed-mobile-item">
+                <a href="">Tài khoản</a>
+            </div>
         </div>
-        <!-- ===============HEADER================= -->
+
+        <div class="fixed-tablet">
+            <div class="fixed-cart">
+                <a href="#" class="fixed-cart-link">
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                    <span class="fixed-cart-quantity">0</span>
+                </a>
+
+                
+            </div>
+        </div>
+
         <header>
             <div class="header__top hide-on-tablet-mobile">
                 <div class="container">
@@ -34,7 +52,7 @@
                         <li><a href="#">Giới thiệu</a></li>
                         <li><a href="#">Sản phẩm đã xem</a></li>
                         <li><a href="#">Tra cứu đơn hàng</a></li>
-                        <li><a href="#">Đăng kí</a></li>
+                        <li><a href="./register.html">Đăng kí</a></li>
                         <li><a href="./login.html">Đăng nhập</a></li>
                     </ul>
                 </div>
@@ -42,80 +60,103 @@
 
             <div class="header__center">
                 <div class="container">
-                    <div class="header__center-inner">
-                        <div class="header__menu-bar hide">
-                            <button>
-                                <i class="fa-solid fa-bars"></i>
-                            </button>
-                        </div>
-                        <div class="header__center-logo">
-                            <a href="#" class="header__center-log-link">
-                                <img src="./images/logo-text (1).png" alt="" class="header__center-logo-img">
-                            </a>
-                        </div>
-
-                        <div class="header__center-search hide-on-tablet-mobile">
-                            <div class="header__center-search-wrapper">
-                                <input type="text" class="header__center-search-input"
-                                    placeholder="Hôm nay bạn cần tìm gì?">
-                                <button class="header__center-search-btn">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="col-pd-6">
+                        <div class="header__center-inner">
+                            <div class="header__menu-bar hide hide-on-pc">
+                                <button>
+                                    <i class="fa-solid fa-bars"></i>
                                 </button>
+                            </div>
 
-                                <div class="header__search-history">
-                                    <p class="header__search-history-heading">Lịch sử tìm kiếm</p>
-                                    <ul class="header__search-history-list">
-                                        <li class="header__search-history-list-item">
-                                            <a href="" class="header__search-history-list-item-link">Search 1</a>
-                                        </li>
-                                        <li class="header__search-history-list-item">
-                                            <a href="" class="header__search-history-list-item-link">Search 2</a>
-                                        </li>
-                                        <li class="header__search-history-list-item">
-                                            <a href="" class="header__search-history-list-item-link">Search 3</a>
-                                        </li>
-                                    </ul>
+                            <div class="header__center-search hide-on-pc">
+                                <div class="header__center-search-wrapper">
+                                    <input type="text" class="header__center-search-input"
+                                        placeholder="Hôm nay bạn cần tìm gì?">
+                                    <button class="header__center-search-btn">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+    
+                                    <div class="header__search-history">
+                                        <p class="header__search-history-heading">Lịch sử tìm kiếm</p>
+                                        <ul class="header__search-history-list">
+                                            <li class="header__search-history-list-item">
+                                                <a href="" class="header__search-history-list-item-link">Search 1</a>
+                                            </li>
+                                            <li class="header__search-history-list-item">
+                                                <a href="" class="header__search-history-list-item-link">Search 2</a>
+                                            </li>
+                                            <li class="header__search-history-list-item">
+                                                <a href="" class="header__search-history-list-item-link">Search 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
+    
+    
                             </div>
 
-                            
-                        </div>
-
-                        <div class="header__center-order">
-                            <div class="header__center-check-order hide-on-tablet-mobile">
-                                <a class="header__center-check-order-link" href="#">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-truck-fast"></i>
-                                    </span>
-                                    <span class="text">Kiểm tra đơn hàng</span>
+                            <div class="header__center-logo">
+                                <a href="#" class="header__center-log-link">
+                                    <img src="./images/logo-img-removebg-preview.png" alt=""
+                                        class="header__center-logo-img">
                                 </a>
                             </div>
-
-                            <div class="header__center-cart">
-                                <a href="#" class="header__center-cart-link">
-                                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                                </a>
-
-                                <span class="cart-quantity">0</span>
+    
+                            <div class="header__center-search hide-on-tablet-mobile">
+                                <div class="header__center-search-wrapper">
+                                    <input type="text" class="header__center-search-input"
+                                        placeholder="Hôm nay bạn cần tìm gì?">
+                                    <button class="header__center-search-btn">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+    
+                                    <div class="header__search-history">
+                                        <p class="header__search-history-heading">Lịch sử tìm kiếm</p>
+                                        <ul class="header__search-history-list">
+                                            <li class="header__search-history-list-item">
+                                                <a href="" class="header__search-history-list-item-link">Search 1</a>
+                                            </li>
+                                            <li class="header__search-history-list-item">
+                                                <a href="" class="header__search-history-list-item-link">Search 2</a>
+                                            </li>
+                                            <li class="header__search-history-list-item">
+                                                <a href="" class="header__search-history-list-item-link">Search 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+    
+    
+                            </div>
+    
+                            <div class="header__center-order">
+                                <div class="header__center-check-order hide-on-tablet-mobile">
+                                    <a class="header__center-check-order-link" href="#">
+                                        <span class="icon">
+                                            <i class="fa-solid fa-truck-fast"></i>
+                                        </span>
+                                        <span class="text">Kiểm tra đơn hàng</span>
+                                    </a>
+                                </div>
+    
+                                <div class="header__center-cart hide-on-tablet-mobile">
+                                    <a href="#" class="header__center-cart-link">
+                                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                    </a>
+    
+                                    <span class="cart-quantity">0</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-              
-        </header>
-
-
-        <!-- ===============BODY WEBSITE================= -->
-        <div id="container" class="container">
-            <div class="row">
-                <div id="category" class="col col-xl-3 hide-on-tablet-mobile">
-                    <div class="category__wrapper">
-                        <div class="category__item">
-                            <button class="category__heading" data-toggle="collapse" data-target="#cate">DANH MỤC</button>
-                            <div id="cate" class="collapse">
+            <div class="header__bottom hide-on-tablet-mobile">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-pd-6">
+                            <div class="header__category">
                                 <ul class="category__item-list">
                                     <li class="category__item-list-li"><a href="./listProduct.html">Điện thoại</a></li>
                                     <li class="category__item-list-li"><a href="./listProduct.html">Laptop</a></li>
@@ -129,864 +170,815 @@
                             </div>
                         </div>
                     </div>
-
-                   
                 </div>
-                <div id="content" class="col col-xl-9">
-                    <section id="slider">
+            </div>
+
+            <div class="menu-mobile-table hide-on-pc">
+                <div class="header__category">
+                    <h4>Danh mục sản phẩm</h4>
+                    <ul class="category__item-list">
+                        <li class="category__item-list-li"><a href="./listProduct.html">Điện thoại</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Laptop</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Đồng hồ</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Ipad</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">PC</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Smart TV</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Tablet</a></li>
+                        <li class="category__item-list-li"><a href="./listProduct.html">Âm thanh</a></li>
+                    </ul>
+
+
+                </div>
+
+                <button class="btn-close">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- ===============BODY WEBSITE================= -->
+        <div id="content">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-12">
                         <div class="container">
+
                             <div class="row">
-                                <div class="col col-lg-12">
-                                    <div id="demo" class="carousel slide" data-ride="carousel">
+                                <div class="col-pd-6">
+                                    <div class="col col-lg-12">
+                                        <div id="demo" class="carousel slide slide-show" data-ride="carousel">
 
-                                        <!-- Indicators -->
-                                        <ul class="carousel-indicators">
-                                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                            <li data-target="#demo" data-slide-to="1"></li>
-                                            <li data-target="#demo" data-slide-to="2"></li>
-                                            <li data-target="#demo" data-slide-to="3"></li>
-                                            <li data-target="#demo" data-slide-to="4"></li>
-                                        </ul>
+                                            <!-- Indicators -->
+                                            <ul class="carousel-indicators">
+                                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                                <li data-target="#demo" data-slide-to="1"></li>
+                                                <li data-target="#demo" data-slide-to="2"></li>
+                                                <li data-target="#demo" data-slide-to="3"></li>
+                                                <li data-target="#demo" data-slide-to="4"></li>
+                                            </ul>
 
-                                        <!-- The slideshow -->
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="image-slider" src="./images/slider1.jpg" alt="Los Angeles">
+                                            <!-- The slideshow -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="image-slider" src="./images/slider1.jpg"
+                                                        alt="Los Angeles">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="image-slider" src="images/slider2.jpg" alt="Chicago">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="image-slider" src="images/slider3.png" alt="New York">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="image-slider" src="images/slider4.jpg" alt="New York">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="image-slider" src="images/slider5.jpg" alt="New York">
+                                                </div>
                                             </div>
-                                            <div class="carousel-item">
-                                                <img class="image-slider" src="images/slider2.jpg" alt="Chicago">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="image-slider" src="images/slider3.png" alt="New York">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="image-slider" src="images/slider4.jpg" alt="New York">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="image-slider" src="images/slider5.jpg" alt="New York">
-                                            </div>
-                                        </div>
 
-                                        <!-- Left and right controls -->
-                                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                                            <i class="fa-solid fa-chevron-left"></i>
-                                        </a>
-                                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                                            <i class="fa-solid fa-chevron-right"></i>
-                                        </a>
+                                            <!-- Left and right controls -->
+                                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </a>
+                                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </a>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="sales-imgs" class="section-margin-top">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col col-xl-4">
-                                    <div class="sales-imgs-item">
-                                        <a href="" class="sales-imgs-item-link">
-                                            <img src="./images/sp-1.png" alt="" class="sales-imgs-item-img">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col col-xl-4">
-                                    <div class="sales-imgs-item">
-                                        <a href="" class="sales-imgs-item-link">
-                                            <img src="./images/sp-2.png" alt="" class="sales-imgs-item-img">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col col-xl-4">
-                                    <div class="sales-imgs-item">
-                                        <a href="" class="sales-imgs-item-link">
-                                            <img src="./images/sp-3.png" alt="" class="sales-imgs-item-img">
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section id="salesflash" class="section-margin-top">
-                        <div class="container">
-                            <div class="salesflash__heading">
-                                <div class="row align-items-center">
-                                    <div class="col col-lg-3">
-                                        <h3 class="salesflash__heading-title">
-                                            FLASH SALE
-                                        </h3>
-                                    </div>
-                                    <div class="col col-lg-5">
-                                        <select class="salesflash__heading-nav">
-                                            <option class="salesflash__heading-nav-item">
-                                                Điện thoại/Tablet
-                                            </option>
-                                            <option class="salesflash__heading-nav-item">
-                                                Laptop/Màn hình/Tivi
-                                            </option>
-                                            <option class="salesflash__heading-nav-item">
-                                                Đồng hồ/Phụ kiện/khác
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="col col-lg-4">
-                                        <div class="salesflash__heading-timer text-right">
-                                            <strong>0</strong>
-                                            <strong>3</strong>
-                                            <span> : </span>
-                                            <strong>1</strong>
-                                            <strong>7</strong>
-                                            <span> : </span>
-                                            <strong>4</strong>
-                                            <strong>7</strong>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="salesflash__content">
+
+                            <section class="product__container section-margin-top">
+
+
                                 <div class="row">
-                                    <div class="col col-xl-4">
-                                        <img src="./images/slider4.jpg" alt="" class="salesflash__content-img">
-                                    </div>
+                                    <div class="col-pd-6">
+                                        <div class="product__container-heading col-xl-12">
+                                            <div class="product__container-heading-bar">
+                                                <div class="product__container-heading-bar-left"></div>
+                                                <div class="product__container-heading-bar-right">
+                                                    <h3>CÓ THỂ BẠN SẼ THÍCH</h3>
 
-                                    <div class="col col-xl-8">
-                                        <div class="salesflash__content-wrapper">
-                                            <div class="row salesflash__content-inner">
-                                                <div class="col col-xl-4 salesflash__content-item">
-                                                    <div class="salesflash__content-product">
-                                                        <a href="#" class="salesflash__content-product-link">
-                                                            <div class="product-image">
-                                                                <img src="./images/image-removebg-preview-5.webp"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="product-info">
-                                                                <a href="#" class="info-link">Camera IP Wifi TP-Link
-                                                                    Tapo C200
-                                                                    360° 1080P - Chính hãng</a>
-                                                                <span class="info-price">
-                                                                    <strong>510,000 ₫</strong>
-                                                                    <strike>799,000 ₫</strike>
-                                                                </span>
-
-                                                            </div>
-                                                        </a>
-                                                    </div>
                                                 </div>
-                                                <div class="col col-xl-4 salesflash__content-item">
-                                                    <div class="salesflash__content-product">
-                                                        <a href="#" class="salesflash__content-product-link">
-                                                            <div class="product-image">
-                                                                <img src="./images/image-removebg-preview-5.webp"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="product-info">
-                                                                <a href="#" class="info-link">Camera IP Wifi TP-Link
-                                                                    Tapo C200
-                                                                    360° 1080P - Chính hãng</a>
-                                                                <span class="info-price">
-                                                                    <strong>510,000 ₫</strong>
-                                                                    <strike>799,000 ₫</strike>
-                                                                </span>
-
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col col-xl-4 salesflash__content-item">
-                                                    <div class="salesflash__content-product">
-                                                        <a href="#" class="salesflash__content-product-link">
-                                                            <div class="product-image">
-                                                                <img src="./images/image-removebg-preview-5.webp"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="product-info">
-                                                                <a href="#" class="info-link">Camera IP Wifi TP-Link
-                                                                    Tapo C200
-                                                                    360° 1080P - Chính hãng</a>
-                                                                <span class="info-price">
-                                                                    <strong>510,000 ₫</strong>
-                                                                    <strike>799,000 ₫</strike>
-                                                                </span>
-
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col col-xl-4 salesflash__content-item">
-                                                    <div class="salesflash__content-product">
-                                                        <a href="#" class="salesflash__content-product-link">
-                                                            <div class="product-image">
-                                                                <img src="./images/image-removebg-preview-5.webp"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="product-info">
-                                                                <a href="#" class="info-link">Camera IP Wifi TP-Link
-                                                                    Tapo C200
-                                                                    360° 1080P - Chính hãng</a>
-                                                                <span class="info-price">
-                                                                    <strong>510,000 ₫</strong>
-                                                                    <strike>799,000 ₫</strike>
-                                                                </span>
-
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col col-xl-4 salesflash__content-item">
-                                                    <div class="salesflash__content-product">
-                                                        <a href="#" class="salesflash__content-product-link">
-                                                            <div class="product-image">
-                                                                <img src="./images/image-removebg-preview-5.webp"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="product-info">
-                                                                <a href="#" class="info-link">Camera IP Wifi TP-Link
-                                                                    Tapo C200
-                                                                    360° 1080P - Chính hãng</a>
-                                                                <span class="info-price">
-                                                                    <strong>510,000 ₫</strong>
-                                                                    <strike>799,000 ₫</strike>
-                                                                </span>
-
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col col-xl-4 salesflash__content-item">
-                                                    <div class="salesflash__content-product">
-                                                        <a href="#" class="salesflash__content-product-link">
-                                                            <div class="product-image">
-                                                                <img src="./images/image-removebg-preview-5.webp"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="product-info">
-                                                                <a href="#" class="info-link">Camera IP Wifi TP-Link
-                                                                    Tapo C200
-                                                                    360° 1080P - Chính hãng</a>
-                                                                <span class="info-price">
-                                                                    <strong>510,000 ₫</strong>
-                                                                    <strike>799,000 ₫</strike>
-                                                                </span>
-
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col col-xl-4 salesflash__content-item">
-                                                    <div class="salesflash__content-product">
-                                                        <a href="#" class="salesflash__content-product-link">
-                                                            <div class="product-image">
-                                                                <img src="./images/image-removebg-preview-5.webp"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="product-info">
-                                                                <a href="#" class="info-link">Camera IP Wifi TP-Link
-                                                                    Tapo C200
-                                                                    360° 1080P - Chính hãng</a>
-                                                                <span class="info-price">
-                                                                    <strong>510,000 ₫</strong>
-                                                                    <strike>799,000 ₫</strike>
-                                                                </span>
-
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
                                             </div>
 
-                                            <div class="salesflash__content-wrapper-button">
-                                                <button class="btn-prev">
-                                                    <i class="fa-solid fa-caret-left"></i>
-                                                </button>
-                                                <button class="btn-next">
-                                                    <i class="fa-solid fa-caret-right"></i>
-                                                </button>
+                                            <div class="product__container-heading-viewall hide-on-mobile">
+                                                <a href="./listProduct.html" class="link-viewall">
+                                                    <span>Xem thêm</span>
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </a>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
-                            </div>
 
 
+                                <div class="container">
+                                    <div class="row">
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <div class="product__container-item-inner">
+                                                    <div class="product-image">
+                                                        <a href="" class="product-image-link">
+                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link"> Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+
+                                                    <a href="" class="add-product">MUA NGAY</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </section>
+
+                            <section class="product__container section-margin-top">
+
+                                <div class="row">
+                                    <div class="col-pd-6">
+                                        <div class="product__container-heading col-xl-12">
+                                            <div class="product__container-heading-bar">
+                                                <div class="product__container-heading-bar-left sub-primary-color">
+                                                </div>
+                                                <div class="product__container-heading-bar-right primary-color">
+                                                    <a href="./listProduct.html" class="bar-link">
+                                                        <h3>APPLE AUTHORISED RESELLER</h3>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product__container-heading-viewall hide-on-mobile">
+                                                <a href="./listProduct.html" class="link-viewall">
+                                                    <span>Xem thêm</span>
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo
+                                                            C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo
+                                                            C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo
+                                                            C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo
+                                                            C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo
+                                                            C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo
+                                                            C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <section class="product__container section-margin-top">
+
+                                <div class="row">
+                                    <div class="col-pd-6">
+                                        <div class="product__container-heading col-xl-12">
+                                            <div class="product__container-heading-bar">
+                                                <div class="product__container-heading-bar-left sub-primary-color">
+                                                </div>
+                                                <div class="product__container-heading-bar-right primary-color">
+                                                    <a href="" class="bar-link">
+                                                        <h3>ĐIỆN THOẠI NỔI BẬT</h3>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="product__container-heading-viewall hide-on-mobile">
+                                                <a href="./listProduct.html" class="link-viewall">
+                                                    <span>Xem thêm</span>
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
+                                            <div class="product__container-item-wrapper">
+                                                <a href="#" class="product__container-item-link">
+                                                    <div class="product-image">
+                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
+                                                            360° 1080P - Chính hãng</a>
+                                                        <span class="info-price">
+                                                            <strong>510,000 ₫</strong>
+                                                            <strike>799,000 ₫</strike>
+                                                        </span>
+
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
                         </div>
-                    </section>
+                    </div>
 
-                    <section class="product__container section-margin-top">
-                        <div class="container">
-                            <div class="product__container-heading">
-                                <div class="product__container-heading-bar">
-                                    <div class="product__container-heading-bar-left"></div>
-                                    <div class="product__container-heading-bar-right">
-                                        <h3>CÓ THỂ BẠN SẼ THÍCH</h3>
-
-                                    </div>
-                                </div>
-
-                                <div class="product__container-heading-viewall hide-on-mobile">
-                                    <a href="./listProduct.html" class="link-viewall">
-                                        <span>Xem thêm</span>
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product__container-content">
-                                <div class="container product__container-inner">
-                                    <div class="row product__container-fix">
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-4 col-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <div class="product__container-item-inner">
-                                                    <div class="product-image">
-                                                        <a href="" class="product-image-link">
-                                                            <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link"> Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                        
-                                                    </div>
-
-                                                    <a href="" class="add-product">MUA NGAY</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="product__container section-margin-top">
-                        <div class="container">
-                            <div class="product__container-heading">
-                                <div class="product__container-heading-bar">
-                                    <div class="product__container-heading-bar-left sub-primary-color"></div>
-                                    <div class="product__container-heading-bar-right primary-color">
-                                        <a href="./listProduct.html" class="bar-link">
-                                            <h3>APPLE AUTHORISED RESELLER</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product__container-heading-viewall hide-on-mobile">
-                                    <a href="./listProduct.html" class="link-viewall">
-                                        <span>Xem thêm</span>
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product__container-content">
-                                <div class="container product__container-inner">
-                                    <div class="row product__container-fix">
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="product__container section-margin-top">
-                        <div class="container">
-                            <div class="product__container-heading">
-                                <div class="product__container-heading-bar">
-                                    <div class="product__container-heading-bar-left sub-primary-color"></div>
-                                    <div class="product__container-heading-bar-right primary-color">
-                                        <a href="" class="bar-link">
-                                            <h3>ĐIỆN THOẠI NỔI BẬT</h3>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="product__container-heading-viewall hide-on-mobile">
-                                    <a href="./listProduct.html" class="link-viewall">
-                                        <span>Xem thêm</span>
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product__container-content">
-                                <div class="container product__container-inner">
-                                    <div class="row product__container-fix">
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col col-xl-15 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                            <div class="product__container-item-wrapper">
-                                                <a href="#" class="product__container-item-link">
-                                                    <div class="product-image">
-                                                        <img src="./images/image-removebg-preview-5.webp" alt="">
-                                                    </div>
-                                                    <div class="product-info">
-                                                        <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                            360° 1080P - Chính hãng</a>
-                                                        <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
         </div>
 
+        <div class="container">
+
+            <div class="brands">
+
+
+
+                        <ul class="brands-list">
+                            <li>
+                                <a class="" href="" title="Apple">
+                                    <img
+                                        src="https://cdn.hoanghamobile.com/i/cat/Uploads/2022/09/07/logoooooooooooooooo.png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="Samsung">
+                                    <img
+                                        src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/samsung-logo-transparent.png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="Xiaomi">
+                                    <img
+                                        src="https://cdn.hoanghamobile.com/i/cat/Uploads/2021/05/27/xiaomi-global-logo-rgb-logo-moi.png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="OPPO">
+                                    <img src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand (3).png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="Nokia">
+                                    <img src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand (4).png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="realme">
+                                    <img src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand (6).png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="Vivo">
+                                    <img src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/vivo-logo.png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="XOR">
+                                    <img src="https://cdn.hoanghamobile.com/i/cat/Uploads/2021/12/24/xorr.png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="Masstel">
+                                    <img src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/10/30/logo-masstel-4.png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="TCL">
+                                    <img src="https://cdn.hoanghamobile.com/i/cat/Uploads/2022/10/06/tclll.png">
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a class="" href="" title="Philips">
+                                    <img src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/07/logo-philips.png">
+                                </a>
+                            </li>
+    
+    
+                        </ul>
+                    
+            </div>
+
+        </div>
+
+        <div class="subscript-wrapper">
+            <div class="container">
+                <div class="subscript-info row">
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="subscript-img col-xl-3 col-md-3 col-sm-3">
+                                <img src="https://hoanghamobile.com/Content/web/img/sub-logo.png">
+
+                            </div>
+                            <div class="subscript-text col-xl-9 col-md-9 col-sm-9">
+                                <h4>Đăng ký nhận tin</h4>
+                                <p>Đăng ký để nhận những chương trình khuyến mại hot nhất của Hoàng Hà Mobile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subscript-form col-xl-4 col-md-4 col-sm-12 col-12">
+                        <form>
+                            <div class="input">
+                                <input type="email" id="email" name="email" placeholder="Nhập E-mail của bạn">
+                            </div>
+                            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+        </div>
 
         <!-- ===============FOOTER================= -->
         <div id="footer">
             <div class="container">
                 <div class="row footer-items">
-                    <div class="col link-content">
+
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content">
                         <h4>Hỗ Trợ - Dịch Vụ</h4>
                         <ul>
                             <li>Mua hàng trả góp</li>
@@ -1000,7 +992,7 @@
                             <li>Câu hỏi thường gặp</li>
                         </ul>
                     </div>
-                    <div class="col link-content">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content">
                         <h4>Thông Tin Liên Hệ</h4>
                         <ul>
                             <li>Bán hàng Online</li>
@@ -1011,17 +1003,17 @@
                             <li>Trung tâm bảo hành</li>
                         </ul>
                     </div>
-                    <div class="col link-content">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content">
                         <h4>Hệ Thống 124 Siêu Thị Trên Toàn Quốc</h4>
                         <ul>
                             <li>Danh sách 124 siêu thị trên toàn quốc</li>
                         </ul>
                     </div>
-                    <div class="col link-content">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content">
                         <h4>Tổng Đài</h4>
                         <div class="btn btn-sdt">1900.2091</div>
                     </div>
-                    <div class="col link-content cs-d">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content cs-d">
                         <h4>Thanh Toán</h4>
                         <ul>
                             <li>
@@ -1050,7 +1042,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col link-content cs-d">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 link-content cs-d">
                         <h4>Hình Thức Vận Chuyển</h4>
                         <ul>
                             <li>
@@ -1058,16 +1050,20 @@
                                 <div class="card-pay"><img src="./images/vnpost.jpg" alt=""></div>
                             </li>
                             <li>
-                                <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img src="./images/logo-bct.png" alt="" class="mt-4 cs-p"></a>
+                                <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img
+                                        src="./images/logo-bct.png" alt="" class="mt-4 cs-p"></a>
                             </li>
                         </ul>
                     </div>
+
                 </div>
                 <div class="row">
                     <div class="col footer-info">
-                        <p>© 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI HOÀNG HÀ. MST:  0106713191. (Đăng ký lần đầu: Ngày 15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)</p>
+                        <p>© 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI HOÀNG HÀ. MST: 0106713191. (Đăng ký lần
+                            đầu: Ngày 15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)</p>
                         <p style="font-weight: bold;">GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</p>
-                        <p>Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Hoàng Mai, Thành Phố Hà Nội, Việt Nam. Điện thoại: 1900.2091. Chịu trách nhiệm nội dung: </p>
+                        <p>Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Hoàng Mai, Thành Phố Hà Nội, Việt Nam.
+                            Điện thoại: 1900.2091. Chịu trách nhiệm nội dung: </p>
                     </div>
                 </div>
             </div>

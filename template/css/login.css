@@ -33,8 +33,6 @@ a:hover {
 }
 
 .container {
-    /* max-width: 1200px;
-    width: 1200px; */
     padding: 0;
 }
 
@@ -44,9 +42,6 @@ a:hover {
     padding-top: 23px;
     padding-bottom: 23px;
     color: #222222;
-    /* margin: auto; */
-    /* max-width: 1200px;
-    width: 1200px; */
     background-color: var(--white);
 }
 

@@ -28,25 +28,38 @@
 
 
 
-// Xử lý carousel cho product sale
-const mainProducts = document.querySelector('.salesflash__content-wrapper');
-const wrapperProducts = document.querySelector('.salesflash__content-inner')
-const allProducts = document.querySelectorAll('.salesflash__content-item');
-const widthProduct = allProducts[0].clientWidth;
-const btnPrev = document.querySelector('.salesflash__content-wrapper-button .btn-prev')
-const btnNext = document.querySelector('.salesflash__content-wrapper-button .btn-next')
-let currentIndex = 0;
+// // Xử lý carousel cho product sale
+// const mainProducts = document.querySelector('.salesflash__content-wrapper');
+// const wrapperProducts = document.querySelector('.salesflash__content-inner')
+// const allProducts = document.querySelectorAll('.salesflash__content-item');
+// const widthProduct = allProducts[0].clientWidth;
+// const btnPrev = document.querySelector('.salesflash__content-wrapper-button .btn-prev')
+// const btnNext = document.querySelector('.salesflash__content-wrapper-button .btn-next')
+// let currentIndex = 0;
 
-btnPrev.onclick = function(e) {
-    if(currentIndex == 0)
-        return
-    currentIndex += widthProduct
-    wrapperProducts.style = `transform: translateX(${currentIndex}px)`;
-}
+// btnPrev.onclick = function(e) {
+//     if(currentIndex == 0)
+//         return
+//     currentIndex += widthProduct
+//     wrapperProducts.style = `transform: translateX(${currentIndex}px)`;
+// }
 
-btnNext.onclick = function(e) {
-    if(currentIndex == -widthProduct * (allProducts.length - 3))
-        return
-    currentIndex -= widthProduct
-    wrapperProducts.style = `transform: translateX(${currentIndex}px)`;
-}   
+// btnNext.onclick = function(e) {
+//     if(currentIndex == -widthProduct * (allProducts.length - 3))
+//         return
+//     currentIndex -= widthProduct
+//     wrapperProducts.style = `transform: translateX(${currentIndex}px)`;
+// }   
+
+
+const btnOpenMenu = document.querySelector('.header__menu-bar button')
+const btnCloseMenu = document.querySelector('.menu-mobile-table .btn-close')
+const menuMobile = document.querySelector('.menu-mobile-table')
+
+btnOpenMenu.addEventListener('click', function(e) {
+    menuMobile.classList.add('transform-menu')
+})
+
+btnCloseMenu.addEventListener('click', (e) => {
+    menuMobile.classList.remove('transform-menu')
+})
