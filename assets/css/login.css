@@ -1,0 +1,228 @@
+/* Reset CSS */
+
+body {
+    margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+/* add css */
+.fs-14{
+    font-size: 14px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.mtr-8px {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* Login */
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: var(--a-hover) !important;
+}
+
+.container {
+    padding: 0;
+}
+
+.login__head-heading {
+    color: var(--text-login);
+    box-sizing: border-box;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    color: #222222;
+    background-color: var(--white);
+}
+
+.login__head-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login__head-item {
+    display: flex;
+    align-items: center;
+}
+
+.login__head-item-logo {
+    margin: 0 15px 0 15px;
+}
+
+.login__head-item-logo:hover {
+    cursor: pointer;
+}
+
+.login__head-item-logo img {
+    max-width: 100%;
+}
+
+.login__head-item-tittle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* content-form */
+#content {
+    box-sizing: border-box;
+    background-color: #ccc;
+}
+
+.heading {
+    background-color: var(--content);
+
+}
+
+.content__bg {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 600px;
+    background-image: url('../images/zyro-image.png'); background-size: contain; background-repeat: no-repeat; background-position: center center;
+}
+
+.form-login {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-login-info {
+    min-height: 482px;
+    width: 400px;
+    background-color: #fff;
+    color: var(--text-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 80px;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.14);
+}
+
+.form-login-tittle-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 30px;
+}
+
+.tittle-form {
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.form-login-items {
+    padding: 0 30px 30px 30px;
+}
+
+.form-login-input{
+    border: 1px solid rgba(0,0,0,.14);
+    border-radius: 2px;
+    display: block;
+    width: 100%;
+    padding: 9px 12px;
+    outline: none;
+    box-shadow: inset 0 2px 0 rgba(0,0,0,.02);
+    margin-bottom: 30px;
+}
+
+::placeholder {
+    color: #ccc;
+    font-size: 15px;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-login:hover {
+    background-color: var(--btn-hover);
+    color: var(--white);
+}
+
+.form-option {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.form-option a {
+    color: var(--text-color);
+}
+
+.form-login-other-tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+}
+
+.form-login-other-tittle-eg {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+.form-login-other-tittle-text {
+    font-size: 12px;
+    padding: 0 16px;
+    color: #ccc;
+}
+
+.form-login-other-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-login-other-item {
+    font-size: 14px;
+    flex: 1;
+    text-align: center;
+    border: 1px solid var(--text-color);
+    padding: 12px 0px;
+    color: var(--black-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-login-other-item p {
+    margin: 0 4px;
+}
+
+.form-login-other-item p i {
+    font-size: 20px;
+    color: rgb(13, 128, 228);
+}
+
+.form-login-other-item:hover {
+    background-color: #f6f6f6;
+}
+
+.form-login-link-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.form-login-link-content-label {
+    color: #ccc;
+    margin: 0;
+}
+
+.form-login-link-register {
+    padding: 4px;
+    color: var(--text-color);
+}
