@@ -66,8 +66,8 @@
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Sản phẩm đã xem</a></li>
                     <li><a href="#">Tra cứu đơn hàng</a></li>
-                    <li><a href="./register.html">Đăng kí</a></li>
-                    <li><a href="./login.html">Đăng nhập</a></li>
+                    <li><a href="./register.php">Đăng kí</a></li>
+                    <li><a href="./login.php">Đăng nhập</a></li>
                 </ul>
             </div>
         </div>
