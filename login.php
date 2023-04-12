@@ -1,8 +1,18 @@
 <?php
+if (isset($_SESSION['user'])) {
+    header('Location: index.php');
+    exit();
+}
+
 require_once('./config/config.php');
+
+ob_start();
+
 $title = 'Đăng nhập';
 $mycss1 = './assets/css/login.css';
 $mycss2 = '';
+
+
 
 //if (isset($_SESSION['user'])) {
 //    header('Location: index.php');
@@ -29,7 +39,7 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
         if ($result['code'] == 0) {
             $data = $result['data'];
             $_SESSION['user'] = $user;
-            $_SESSION['name'] = $data['firstname'] . ' ' . $data['lastname'];
+            $_SESSION['name'] = $user;
 
             header('Location: index.php');
             exit();
@@ -103,7 +113,6 @@ require_once('header.php');
                     </form>
                 </div>
             </div>
-
         </div>
     </div>
 

@@ -2,12 +2,8 @@
 include_once './config/config.php';
 include_once './config/function.php';
 
-ob_start();
-
-$title = 'Giỏ hàng';
-$mycss1 = './assets/css/product.css';
-$mycss2 = './assets/css/cart.css';
 require_once('header.php');
+
 
 function pdo_connect_mysql()
 {
@@ -52,9 +48,11 @@ if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['produc
         }
     }
     // Prevent form resubmission...
-    header('location: cart.php');
+    header('location: index.php?page=cart');
     exit;
 }
+
+
 
 
 // Remove product from cart, check for the URL param "remove", this is the product id, make sure it's a number and check if it's in the cart
@@ -79,16 +77,19 @@ if (isset($_POST['update']) && isset($_SESSION['cart'])) {
         }
     }
     // Prevent form resubmission...
-    header('location: cart.php');
+    header('location: index.php?page=cart');
     exit;
 }
+
 
 
 // Send the user to the place order page if they click the Place Order button, also the cart should not be empty
 if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-    header('Location: placeorder.php');
+    header('Location: index.php?page=placeorder');
     exit;
 }
+
+
 
 
 // Check the session variable for products in cart
@@ -110,67 +111,86 @@ if ($products_in_cart) {
         $subtotal += (float)$product['price'] * (int)$products_in_cart[$product['id']];
     }
 }
-
-ob_end_flush();
 ?>
 
-    <main style="margin-top: 100px">
-        <div class="cart content-wrapper">
-            <h1>Giỏ hàng</h1>
-            <form action="cart.php" method="post">
-                <table>
-                    <thead>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <title>$title</title>-->
+<!--    <link href="style.css" rel="stylesheet" type="text/css">-->
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<header>-->
+<!--    <div class="content-wrapper">-->
+<!--        <h1>Shopping Cart System</h1>-->
+<!--        <nav>-->
+<!--            <a href="index.php">Home</a>-->
+<!--            <a href="index.php?page=products">Products</a>-->
+<!--        </nav>-->
+<!--        <div class="link-icons">-->
+<!--            <a href="index.php?page=cart">-->
+<!--                <i class="fas fa-shopping-cart"><span>$num_items_in_cart</span></i>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
+<main>
+
+
+
+    <div class="cart content-wrapper">
+        <h1>Shopping Cart</h1>
+        <form action="index.php?page=cart" method="post">
+            <table>
+                <thead>
+                <tr>
+                    <td colspan="2">Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
+                </tr>
+                </thead>
+                <tbody>
+                <?php if (empty($products)): ?>
                     <tr>
-                        <td colspan="2">Sản phẩm</td>
-                        <td>Giá</td>
-                        <td>Số lượng</td>
-                        <td>Tổng cộng</td>
+                        <td colspan="5" style="text-align:center;">You have no products added in your Shopping Cart</td>
                     </tr>
-                    </thead>
-                    <tbody>
-                    <?php if (empty($products)): ?>
+                <?php else: ?>
+                    <?php foreach ($products as $product): ?>
                         <tr>
-                            <td colspan="5" style="text-align:center;">Bạn chưa thêm sản phẩm nào vào Giỏ hàng
+                            <td class="img">
+                                <a href="index.php?page=product&id=<?=$product['id']?>">
+                                    <img src="./assets/images/<?=$product['image']?>" width="50" height="50" alt="<?=$product['name']?>">
+                                </a>
                             </td>
+                            <td>
+                                <a href="index.php?page=product&id=<?=$product['id']?>"><?=$product['name']?></a>
+                                <br>
+                                <a href="index.php?page=cart&remove=<?=$product['id']?>" class="remove">Remove</a>
+                            </td>
+                            <td class="price">&dollar;<?=$product['price']?></td>
+                            <td class="quantity">
+                                <input type="number" name="quantity-<?=$product['id']?>" value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
+                            </td>
+                            <td class="price">&dollar;<?=$product['price'] * $products_in_cart[$product['id']]?></td>
                         </tr>
-                    <?php else: ?>
-                        <?php foreach ($products as $product): ?>
-                            <tr>
-                                <td class="img">
-                                    <a href="detailProduct.php?id=<?= $product['id'] ?>">
-                                        <img src="./assets/images/<?= $product['image'] ?>" width="50" height="50"
-                                             alt="<?= $product['name'] ?>">
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="detailProduct.php?id=<?= $product['id'] ?>"><?= $product['name'] ?></a>
-                                    <br>
-                                    <a href="cart.php?remove=<?= $product['id'] ?>" class="remove">Remove</a>
-                                </td>
-                                <td class="price"><?= $product['price'] ?>₫</td>
-                                <td class="quantity">
-                                    <input type="number" name="quantity-<?= $product['id'] ?>"
-                                           value="<?= $products_in_cart[$product['id']] ?>" min="1"
-                                           max="<?= $product['quantity'] ?>" placeholder="Quantity" required>
-                                </td>
-                                <td class="price"><?= $product['price'] * $products_in_cart[$product['id']] ?>₫</td>
-                            </tr>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                    </tbody>
-                </table>
-                <div class="subtotal">
-                    <span class="text">Tổng tiền thanh toán</span>
-                    <span class="price"><?= $subtotal ?>₫</span>
-                </div>
-                <div class="buttons">
-                    <input type="submit" value="Cập nhật" name="update">
-                    <input type="submit" value="Đặt hàng" name="placeorder">
-                </div>
-            </form>
-        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                </tbody>
+            </table>
+            <div class="subtotal">
+                <span class="text">Subtotal</span>
+                <span class="price">&dollar;<?=$subtotal?></span>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Update" name="update">
+                <input type="submit" value="Place Order" name="placeorder">
+                <a> <?php print_r($_SESSION['cart']); ?> </a>
+            </div>
+        </form>
+    </div>
     </main>
 
-<?php
-require_once 'footer.php';
-?>

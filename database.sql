@@ -40,7 +40,29 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `username`, `password`, `fullname`, `email`, `gender`, `dob`, `phone`, `address`, `level`, `activated`, `activate_token`) VALUES
-(1, 'admin', '$2y$10$UA6d8dqFhh5T1WWWNZGeDetmVrMw8rGwndxxQijdKfBdte8z4l9wm','Nguyễn Văn Biên', 'nvb221003@gmail.com', 1, '2003-04-09', '0333091697', 'Đắk Lắk', 'admin', b'1', '123456');
+(1, 'admin', '$2y$10$UA6d8dqFhh5T1WWWNZGeDetmVrMw8rGwndxxQijdKfBdte8z4l9wm','Nguyễn Văn Biên', 'nvb221003@gmail.com', 1, '2003-04-09', '0333091697', 'Đắk Lắk', 'admin', b'1', '123456'),
+(2, 'NguyenVanBien', '$2y$10$UA6d8dqFhh5T1WWWNZGeDetmVrMw8rGwndxxQijdKfBdte8z4l9wm','Nguyễn Văn Biên', 'admin@gmail.com', 1, '2003-04-09', '0333091697', 'Đắk Lắk', 'admin', b'1', '123456');
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `cate`
+--
+
+CREATE TABLE `cate` (
+                           `id_cate` int(11) NOT NULL,
+                           `name_cate` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                           `date_creat` datetime,
+                           `stt_cate` tinyint(4)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `cate`
+--
+
+INSERT INTO `cate` (`id_cate`, `name_cate`, `date_creat`, `stt_cate`) VALUES
+(1,'Điện thoại','2023-04-10',1),
+(2,'Đồng hồ','2023-04-10',2),
+(3,'Laptop','2023-04-10',3);
 
 -- --------------------------------------------------------
 
@@ -49,22 +71,78 @@ INSERT INTO `account` (`id`, `username`, `password`, `fullname`, `email`, `gende
 --
 
 CREATE TABLE `product` (
-                           `id` int NOT NULL,
+                           `id` int(11) NOT NULL,
+                           `id_cate` int(11),
                            `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-                           `price` int DEFAULT NULL,
+                           `price` float DEFAULT NULL,
+                           `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+                           `quantity` tinyint(4),
                            `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-                           `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+                           `date_creat` date,
+                           `stt` tinyint(4)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `price`, `description`, `image`) VALUES
-                                                                          (1, 'iPhone XS MAX 64GB', 24490000, 'Hàng xách tay chính hãng', 'iphone-6s-128gb-hong-1-400x450.png'),
-                                                                          (2, 'Samsung Galaxy J7 Plus', 12990000, 'Bao test bào xài 6 tháng', 'samsung-galaxy-j7-plus-1-400x460.png'),
-                                                                          (3, 'iPhone 7 Plus 128GB Black', 14490000, 'Hàng cũ mới 99%', 'iphone-7-plus-128gb-de-400x460.png'),
-                                                                          (4, 'Oppo F3 Plus', 7990000, 'Hàng chợ Bà Chiểu', 'oppo-f3-plus-1-1-400x460.png');
+INSERT INTO `product` (`id`, `id_cate`, `name`, `price`, `image`, `quantity`, `description`, `date_creat`, `stt`) VALUES
+(10, 1,'Điện thoại di động iPhone X (256GB) - Chính hãng VN/A', 9100000, 'iphone10.png', 200, 'iPhone X VN/A là dòng sản phẩm cao cấp', '2023-04-10', 1),
+(11, 1,'Điện thoại di động iPhone 11 (256GB) - Chính hãng VN/A', 15150000, 'iphone11.png', 200, 'iPhone 11 VN/A là dòng sản phẩm cao cấp', '2023-04-10', 1),
+(12, 1,'Điện thoại di động iPhone 12 (128GB) - Chính hãng VN/A', 17150000, 'iphone12.png', 200, 'iPhone 12 VN/A là dòng sản phẩm cao cấp', '2023-04-10', 1),
+(13, 1,'Điện thoại di động iPhone 13 (256GB) - Chính hãng VN/A', 20150000, 'iphone13.png', 200, 'iPhone 13 VN/A là dòng sản phẩm cao cấp', '2023-04-10', 1),
+(14, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+(15, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+(16, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+(17, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+(18, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+(19, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+(20, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+(14, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+(14, 1,'Điện thoại di động iPhone 14 Pro Max (256GB) - Chính hãng VN/A', 30150000, 'iphone14.png', 200, 'iPhone 14 Pro Max VN/A là dòng sản phẩm cao cấp nhất', '2023-04-10', 1)
+
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `detail_oder`
+--
+
+CREATE TABLE `detail_order` (
+                           `id_order` int(11) NOT NULL,
+                           `id_product` int(11),
+                           `price` float DEFAULT NULL,
+                           `quantity` int(11),
+                           `total` float,
+                           `stt` tinyint(4)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `detail_oder`
+--
+
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `order`
+--
+
+CREATE TABLE `order` (
+                               `id_order` int(11) NOT NULL,
+                               `id_member` int(11) NOT NULL,
+                               `note` varchar(255) COLLATE utf8_unicode_ci,
+                               `stt_oder` int(11),
+                               `date_oder` date
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `order`
+--
+
+
 
 -- --------------------------------------------------------
 
@@ -83,8 +161,7 @@ CREATE TABLE `reset_token` (
 --
 
 INSERT INTO `reset_token` (`email`, `token`, `expire_on`) VALUES
-                                                              ('mvmanh@gmail.com', '', 0),
-                                                              ('mvmanh@it.tdt.edu.vn', '', 0);
+                                                              ('nvb221003@gmail.com', '', 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -98,16 +175,35 @@ ALTER TABLE `account`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Chỉ mục cho bảng `reset_token`
+--
+ALTER TABLE `reset_token`
+    ADD PRIMARY KEY (`email`);
+
+--
+-- Chỉ mục cho bảng `cate`
+--
+ALTER TABLE `cate`
+    ADD PRIMARY KEY (`id_cate`);
+
+--
 -- Chỉ mục cho bảng `product`
 --
 ALTER TABLE `product`
     ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `reset_token`
+-- Chỉ mục cho bảng `detail_order`
 --
-ALTER TABLE `reset_token`
-    ADD PRIMARY KEY (`email`);
+ALTER TABLE `detail_order`
+    ADD PRIMARY KEY (`id_order`);
+
+--
+-- Chỉ mục cho bảng `order`
+--
+ALTER TABLE `order`
+    ADD PRIMARY KEY (`id_order`);
+
 
 --
 -- AUTO_INCREMENT cho bảng `account`
@@ -123,7 +219,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

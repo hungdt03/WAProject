@@ -50,7 +50,7 @@ a:hover {
     padding-top: 23px;
     padding-bottom: 23px;
     color: #222222;
-    background-color: var(--white);
+    background-color: var(--white-color);
 }
 
 .register__head-items {
@@ -93,7 +93,7 @@ a:hover {
     align-items: center;
     justify-content: flex-end;
     /* height: 600px; */
-    background-image: url('../images/zyro-image.png'); background-size: contain; background-repeat: no-repeat; background-position: center center;
+    background-image: url('../images/zyro-image1.png'); background-size: contain; background-repeat: no-repeat; background-position: center center;)
 }
 
 .form-register {

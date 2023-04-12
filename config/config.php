@@ -6,6 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
+require_once './models/Category.php';
 
 define('HOST', '127.0.0.1');
 define('USER', 'root');
@@ -153,4 +154,6 @@ function activeAccount($email, $token){
 
     return array('code' => 0, 'message' => 'Account activated');
 }
+
+
 ?>

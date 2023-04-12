@@ -1,8 +1,12 @@
+<?php
+    require_once ('models/Category.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title><?=$title;?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +17,12 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-
     <link rel="stylesheet" href="<?=$mycss1;?>">
     <link rel="stylesheet" href="<?=$mycss2;?>">
-
-
+<!--    <link href="style.css" rel="stylesheet" type="text/css">-->
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">-->
     <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png"/>
-<!--    <title>--><?php //=$title;?><!--</title>-->
+
     <!-- jQuery library -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
 
@@ -28,6 +31,8 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </head>
 
 <body>
@@ -54,8 +59,6 @@
                 <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                 <span class="fixed-cart-quantity">0</span>
             </a>
-
-
         </div>
     </div>
 
@@ -66,8 +69,8 @@
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Sản phẩm đã xem</a></li>
                     <li><a href="#">Tra cứu đơn hàng</a></li>
-                    <li><a href="./register.php">Đăng kí</a></li>
-                    <li><a href="./login.php">Đăng nhập</a></li>
+                    <li><a href=<?= isset($_SESSION['name'])?'':"./login.php" ?> ><?= isset($_SESSION['name']) ? $_SESSION['name'] : 'Đăng nhập' ?></a></li>
+                    <li><a href=<?= !isset($_SESSION['name'])?'./register.php':"./logout.php" ?> ><?= isset($_SESSION['name']) ? 'Đăng xuất' : 'Đăng ký' ?></a></li>
                 </ul>
             </div>
         </div>
@@ -144,8 +147,8 @@
 
                         <div class="header__center-order">
                             <div class="header__center-check-order hide-on-tablet-mobile">
-                                <a class="header__center-check-order-link" href="#">
-                                        <span class="icon">
+                                <a class="header__center-check-order-link" >
+                                        <span  href="cart.php"  class="icon">
                                             <i class="fa-solid fa-truck-fast"></i>
                                         </span>
                                     <span class="text">Kiểm tra đơn hàng</span>
@@ -153,11 +156,10 @@
                             </div>
 
                             <div class="header__center-cart hide-on-tablet-mobile">
-                                <a href="#" class="header__center-cart-link">
+                                <a href="cart.php" class="header__center-cart-link">
                                     <i class="fa-sharp fa-solid fa-cart-shopping"></i>
                                 </a>
-
-                                <span class="cart-quantity">0</span>
+                                <span class="cart-quantity"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?></span>
                             </div>
                         </div>
                     </div>
@@ -170,15 +172,17 @@
                 <div class="row">
                     <div class="col-pd-6">
                         <div class="header__category">
-                            <ul class="category__item-list">
-                                <li class="category__item-list-li"><a href="./listProduct.php">Điện thoại</a></li>
-                                <li class="category__item-list-li"><a href="./listProduct.php">Laptop</a></li>
-                                <li class="category__item-list-li"><a href="./listProduct.php">Đồng hồ</a></li>
-                                <li class="category__item-list-li"><a href="./listProduct.php">Ipad</a></li>
-                                <li class="category__item-list-li"><a href="./listProduct.php">PC</a></li>
-                                <li class="category__item-list-li"><a href="./listProduct.php">Smart TV</a></li>
-                                <li class="category__item-list-li"><a href="./listProduct.php">Tablet</a></li>
-                                <li class="category__item-list-li"><a href="./listProduct.php">Âm thanh</a></li>
+                            <ul class="category__item-list text-white">
+<!--                                --><?php
+//                                    $listCates = Category::getCategories()['data'];
+//                                    foreach ($listCates as $cate) {
+//                                ?>
+                                    <li class="category__item-list-li"><a href="./listProduct.php?id=<?= $cate['id_cate'] ?>"><?= $cate['name_cate'] ?></a></li>
+<!--
+<!--                                --><?php
+//                                    }
+//                                ?>
+
                             </ul>
                         </div>
                     </div>

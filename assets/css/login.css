@@ -42,7 +42,7 @@ a:hover {
     padding-top: 23px;
     padding-bottom: 23px;
     color: #222222;
-    background-color: var(--white);
+    background-color: var(--white-color);
 }
 
 .login__head-items {
@@ -142,12 +142,12 @@ a:hover {
 .btn-login {
     width: 100%;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--white-color);
 }
 
 .btn-login:hover {
     background-color: var(--btn-hover);
-    color: var(--white);
+    color: var(--white-color);
 }
 
 .form-option {
