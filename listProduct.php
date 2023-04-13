@@ -1,4 +1,18 @@
 <?php
+require_once('./models/Category.php');
+require_once('./models/Product.php');
+
+if(isset($_GET['type'])) {
+    if(!empty($_GET['type'])) {
+        $type = $_GET['type'];
+        $currentCate = Category::get($type);
+    } else {
+        $currentCate = Category::get(0);
+    }
+} else {
+    $currentCate = Category::get(0);
+}
+
 $title = 'Danh sách sản phẩm';
 $mycss1 = './assets/css/listProduct.css';
 $mycss2 = './assets/css/product.css';
@@ -10,8 +24,8 @@ require_once('header.php');
                 <div class="col-pd-6">
                     <div class="breadcrumb__wrapper hide-on-mobile">
                         <ul class="breadcrumb__list">
-                            <li class="breadcrumb__list-item"><a href="" class="breadcrumb__list-item-link">Trang chủ</a></li> >
-                            <li class="breadcrumb__list-item"><a href="" class="breadcrumb__list-item-link">Sản phẩm</a></li>
+                            <li class="breadcrumb__list-item"><a href="/" class="breadcrumb__list-item-link">Trang chủ</a></li> >
+                            <li class="breadcrumb__list-item"><a href="#" class="breadcrumb__list-item-link">Sản phẩm</a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,7 +81,11 @@ require_once('header.php');
                     <div class="col col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                         <div class="col-pd-6">
                             <div class="all__product-heading">
-                                <h3 class="all__product-heading-title">ĐIỆN THOẠI APPLE</h3>
+                                <?php
+
+                                    if($currentCate != null) {
+                                ?>
+                                <h3 class="all__product-heading-title"><?= $currentCate->name ?></h3>
                             </div>
     
                             <div class="all__product-heading-wrapper">
@@ -93,115 +111,37 @@ require_once('header.php');
                         </div>
                         <div class="allproduct__wrapper container">
                             <div class="row">
-                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
-                                    <div class="product__container-item-wrapper">
-                                        <a href="./productDetail.html" class="product__container-item-link">
-                                            <div class="product-image">
-                                                <img src="./assets/images/image-removebg-preview-5.webp" alt="">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                    360° 1080P - Chính hãng</a>
-                                                <span class="info-price">
-                                                    <strong>510,000 ₫</strong>
-                                                    <strike>799,000 ₫</strike>
-                                                </span>
+                                <?php
+                                $lstProducts = Product::getSome(0, 11)['data'];
+                                    foreach($lstProducts as $prod) {
 
-                                            </div>
-                                        </a>
+                                        if($prod->idCate == $currentCate->id) {
+                                ?>
+                                <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
+                                    <div class="product__container-item-wrapper">
+                                        <div class="product__container-item-inner">
+                                            <a href="./detailProduct.php?id=<?= $prod->id ?>" class="product__container-item-link">
+                                                <div class="product-image">
+                                                    <img src="./assets/images/<?= $prod->imgFile ?>" alt="">
+                                                </div>
+                                                <div class="product-info">
+                                                    <a href="./detailProduct.php?id=<?= $prod->id ?>" class="info-link"><?= $prod->name ?></a>
+                                                    <span class="info-price">
+                                                        <strong><?= $prod->price ?></strong>
+                                                        <strike>799,000 ₫</strike>
+                                                    </span>
+
+                                                </div>
+                                            </a>
+                                            <a href="./detailProduct.php?id=<?php echo $prod->id;?>" class="add-product">MUA NGAY</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
-                                    <div class="product__container-item-wrapper">
-                                        <a href="#" class="product__container-item-link">
-                                            <div class="product-image">
-                                                <img src="./assets/images/image-removebg-preview-5.webp" alt="">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                    360° 1080P - Chính hãng</a>
-                                                <span class="info-price">
-                                                    <strong>510,000 ₫</strong>
-                                                    <strike>799,000 ₫</strike>
-                                                </span>
-
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
-                                    <div class="product__container-item-wrapper">
-                                        <a href="#" class="product__container-item-link">
-                                            <div class="product-image">
-                                                <img src="./assets/images/image-removebg-preview-5.webp" alt="">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                    360° 1080P - Chính hãng</a>
-                                                <span class="info-price">
-                                                    <strong>510,000 ₫</strong>
-                                                    <strike>799,000 ₫</strike>
-                                                </span>
-
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
-                                    <div class="product__container-item-wrapper">
-                                        <a href="#" class="product__container-item-link">
-                                            <div class="product-image">
-                                                <img src="./assets/images/image-removebg-preview-5.webp" alt="">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                    360° 1080P - Chính hãng</a>
-                                                <span class="info-price">
-                                                    <strong>510,000 ₫</strong>
-                                                    <strike>799,000 ₫</strike>
-                                                </span>
-
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
-                                    <div class="product__container-item-wrapper">
-                                        <a href="#" class="product__container-item-link">
-                                            <div class="product-image">
-                                                <img src="./assets/images/image-removebg-preview-5.webp" alt="">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                    360° 1080P - Chính hãng</a>
-                                                <span class="info-price">
-                                                    <strong>510,000 ₫</strong>
-                                                    <strike>799,000 ₫</strike>
-                                                </span>
-
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col col-xl-15 col-lg-3 col-md-3 col-sm-4 col-6 product__container-item">
-                                    <div class="product__container-item-wrapper">
-                                        <a href="#" class="product__container-item-link">
-                                            <div class="product-image">
-                                                <img src="./assets/images/image-removebg-preview-5.webp" alt="">
-                                            </div>
-                                            <div class="product-info">
-                                                <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200
-                                                    360° 1080P - Chính hãng</a>
-                                                <span class="info-price">
-                                                    <strong>510,000 ₫</strong>
-                                                    <strike>799,000 ₫</strike>
-                                                </span>
-
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                
+                                <?php  
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
 

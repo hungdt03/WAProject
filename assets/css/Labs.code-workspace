@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "D:/WEB-DEVELOPMENT/Document/Labs"
+		},
+		{
+			"path": "../../../QT2_52100550"
+		},
+		{
+			"path": "D:/Web_Application_Project"
+		},
+		{
+			"path": "../../../mvc"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../Lab9"
+		},
+		{
+			"path": "../../../php_Shop"
+		},
+		{
+			"path": "D:/PROJECTS FRONT END/shopee-f8"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "shopee-f8"
+	}
+}

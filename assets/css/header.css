@@ -103,7 +103,8 @@ header {
 .header__search-history-list-item-link {
     font-size: 14px;
     padding: 5px 0;
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header__search-history-list-item:hover {
@@ -133,6 +134,26 @@ header {
     font-size: 16px;
     color: #fff;
     transition: all linear .3s;
+}
+
+.search-img-item-wrapper {
+    width: 40px;
+    height: 40px;
+}
+
+.search-img-product {
+    width: 100%;
+}
+
+.search-name-product {
+    font-size: 15px;
+    margin: 0;
+}
+
+.search-price-product {
+    color: #ff6801 !important;
+    margin: 0;
+    font-size: 13px;
 }
 
 .header__center-search-btn:hover {

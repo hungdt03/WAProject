@@ -1,56 +1,3 @@
-// function changeHeader(pixels) {
-//     const header = document.querySelector('header');
-//     if(!localStorage.getItem('header')) {
-//         localStorage.setItem('header', JSON.stringify(header.innerHTML));
-//     }
-
-//     if(window.pageYOffset >= pixels) {
-//         const nav = document.querySelector('.header__bottom .container');
-
-//         if(nav) {
-//             nav.backgroundColor = '#00483d';
-//             header.innerHTML = nav.innerHTML;
-//             header.classList.add('fixed-scroll-header')
-//         }
-        
-//     } else {
-//         const getHeader = localStorage.getItem('header');
-//         header.classList.remove('fixed-scroll-header')
-//         if(getHeader) {
-//             header.innerHTML = JSON.parse(getHeader);
-//         }
-//     }
-// }
-
-// window.onscroll = function(e) {
-//     changeHeader(170)
-// }
-
-
-
-// // Xử lý carousel cho product sale
-// const mainProducts = document.querySelector('.salesflash__content-wrapper');
-// const wrapperProducts = document.querySelector('.salesflash__content-inner')
-// const allProducts = document.querySelectorAll('.salesflash__content-item');
-// const widthProduct = allProducts[0].clientWidth;
-// const btnPrev = document.querySelector('.salesflash__content-wrapper-button .btn-prev')
-// const btnNext = document.querySelector('.salesflash__content-wrapper-button .btn-next')
-// let currentIndex = 0;
-
-// btnPrev.onclick = function(e) {
-//     if(currentIndex == 0)
-//         return
-//     currentIndex += widthProduct
-//     wrapperProducts.style = `transform: translateX(${currentIndex}px)`;
-// }
-
-// btnNext.onclick = function(e) {
-//     if(currentIndex == -widthProduct * (allProducts.length - 3))
-//         return
-//     currentIndex -= widthProduct
-//     wrapperProducts.style = `transform: translateX(${currentIndex}px)`;
-// }   
-
 
 const btnOpenMenu = document.querySelector('.header__menu-bar button')
 const btnCloseMenu = document.querySelector('.menu-mobile-table .btn-close')
@@ -63,3 +10,63 @@ btnOpenMenu.addEventListener('click', function(e) {
 btnCloseMenu.addEventListener('click', (e) => {
     menuMobile.classList.remove('transform-menu')
 })
+
+
+const searchInput = document.querySelector('.header__center-search-input');
+
+const xhr = new XMLHttpRequest();
+searchInput.oninput = function(e) {
+    
+    if(searchInput.value.length >= 2) {
+        
+        xhr.addEventListener('load', function(e) {
+            
+            if(xhr.status === 200 && xhr.readyState === 4) {
+                let response = JSON.parse(this.responseText);
+                console.log(response.status, response.data);
+                if(response.status == true) {
+                    renderHistory(response.data, '.header__search-history-list', searchInput.value);
+                }
+                
+            }
+        })
+    
+        xhr.open("GET","http://localhost/WAProject/search-product.php?search=" + encodeURIComponent(searchInput.value));
+        xhr.send();
+    }
+    
+}
+
+function renderHistory(response, selector, key) {
+    const searchHistory = document.querySelector(selector);
+    let html = "";
+
+    html = response.map((product) => {
+        return `
+            <li class="header__search-history-list-item" onclick="e.preventDefault()">
+                <a href="/detailProduct?id=${product.id}" alt="" class="header__search-history-list-item-link d-flex justify-content-between">
+                   
+                        <div class="search-info-item-wrapper">
+                            <h4 class="search-name-product">${product.name}</h4>
+                            <p class="search-price-product">${product.price} VND</div>
+
+                            <div class="search-img-item-wrapper">
+                                <img width="80px" class="search-img-product" src="./assets/images/${product.image}">
+                            </div>
+                        </div> 
+                   
+                </a>
+            </li>
+        `
+    }).join('');
+
+    if(html == "") {
+        searchHistory.innerHTML = "Không tìm thấy cho " + key;
+    } else {
+        searchHistory.innerHTML = html;
+    }
+
+    
+}
+
+

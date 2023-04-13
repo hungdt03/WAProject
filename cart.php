@@ -115,10 +115,11 @@ ob_end_flush();
 ?>
 
     <main style="margin-top: 100px">
+        <div class="container">
         <div class="cart content-wrapper">
-            <h1>Giỏ hàng</h1>
+            <h1 class="cart-heading">Giỏ hàng</h1>
             <form action="cart.php" method="post">
-                <table>
+                <table class="table-cart" border="1">
                     <thead>
                     <tr>
                         <td colspan="2">Sản phẩm</td>
@@ -168,6 +169,7 @@ ob_end_flush();
                     <input type="submit" value="Đặt hàng" name="placeorder">
                 </div>
             </form>
+        </div>
         </div>
     </main>
 

@@ -1,11 +1,18 @@
 <?php
 include_once './config/config.php';
 include_once './config/function.php';
+require_once './models/Product.php';
+
+
+
 $title = 'BCHmobile';
 $mycss1 = './assets/css/product.css';
 $mycss2 = '';
+
 require_once('header.php');
-$rsHot = getProHot();
+
+
+
 ?>
     <!-- ===============BODY WEBSITE================= -->
     <div id="content">
@@ -64,6 +71,13 @@ $rsHot = getProHot();
                             </div>
                         </div>
 
+                        <?php
+                            $lstCates = Category::getAll()['data'];
+                           
+                            foreach($lstCates as $cate) {
+                                
+                        ?>
+
                         <section class="product__container section-margin-top">
                             <div class="row">
                                 <div class="col-pd-6">
@@ -71,11 +85,11 @@ $rsHot = getProHot();
                                         <div class="product__container-heading-bar">
                                             <div class="product__container-heading-bar-left"></div>
                                             <div class="product__container-heading-bar-right">
-                                                <h3>CÓ THỂ BẠN SẼ THÍCH</h3>
+                                                <a href="./listProduct.php?type=<?= $cate->id ?>"> <h3><?= $cate->name ?></h3></a>
                                             </div>
                                         </div>
                                         <div class="product__container-heading-viewall hide-on-mobile">
-                                            <a href="./listProduct.php" class="link-viewall">
+                                            <a href="./listProduct.php?type=<?= $cate->id ?>" class="link-viewall">
                                                 <span>Xem thêm</span>
                                                 <i class="fa-solid fa-chevron-right"></i>
                                             </a>
@@ -85,131 +99,50 @@ $rsHot = getProHot();
                             </div>
                             <div class="container">
                                 <div class="row">
-                                    <?php
-                                    foreach ($rsHot as $keyHot => $valueHot){
+                                <?php
+                                    $lstProducts = Product::getSome(0, 9)['data'];
+                                    foreach ($lstProducts as $product){
+                                        
+                                        if($cate->id === $product->idCate) {
+                                            $pro = $product;
+                                        
                                         ?>
                                         <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
                                             <div class="product__container-item-wrapper" >
                                                 <div class="product__container-item-inner">
                                                     <div class="product-image">
-                                                        <a href="./detailProduct.php?id=<?php echo $valueHot['id'];?>" class="product-image-link">
-                                                            <img src="./assets/images/<?php echo $valueHot['image'];?>" alt="">
+                                                        <a href="./detailProduct.php?id=<?php echo $pro->id;?>" class="product-image-link">
+                                                            <img src="./assets/images/<?php echo $pro->imgFile;?>" alt="kkkk">
                                                         </a>
                                                     </div>
                                                     <div class="product-info">
-                                                        <a href="./detailProduct.php?id=<?php echo $valueHot['id'];?>" class="info-link"><?php echo $valueHot['name'];?></a>
+                                                        <a href="./detailProduct.php?id=<?php echo $pro->id;?>" class="info-link">
+                                                            <h3><?php echo $pro->name;?></h3>
+                                                        </a>
                                                         <span class="info-price">
-                                                            <strong><?php echo number_format($valueHot['price']);?> ₫</strong>
+                                                            <strong><?php echo number_format($pro->price);?> ₫</strong>
                                                         </span>
                                                     </div>
-                                                    <a href="./detailProduct.php?id=<?php echo $valueHot['id'];?>" class="add-product">MUA NGAY</a>
+                                                    <a href="./detailProduct.php?id=<?php echo $pro->id;?>" class="add-product">MUA NGAY</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <?php
-                                    } ?>
+                                        }
+
+                                        
+                                        
+                                    } 
+                                    ?>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="product__container section-margin-top">
-                            <div class="row">
-                                <div class="col-pd-6">
-                                    <div class="product__container-heading col-xl-12">
-                                        <div class="product__container-heading-bar">
-                                            <div class="product__container-heading-bar-left sub-primary-color">
-                                            </div>
-                                            <div class="product__container-heading-bar-right primary-color">
-                                                <a href="./listProduct.php" class="bar-link">
-                                                    <h3>APPLE AUTHORISED RESELLER</h3>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="product__container-heading-viewall hide-on-mobile">
-                                            <a href="./listProduct.php" class="link-viewall">
-                                                <span>Xem thêm</span>
-                                                <i class="fa-solid fa-chevron-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-6 product__container-item">
-                                        <div class="product__container-item-wrapper">
-                                            <a href="#" class="product__container-item-link">
-                                                <div class="product-image">
-                                                    <img src="./assets/images/image-removebg-preview-5.webp" alt="">
-                                                </div>
-                                                <div class="product-info">
-                                                    <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200 360°
-                                                        1080P - Chính
-                                                        hãng</a>
-                                                    <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                        </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </section>
-
-                        <section class="product__container section-margin-top">
-
-                            <div class="row">
-                                <div class="col-pd-6">
-                                    <div class="product__container-heading col-xl-12">
-                                        <div class="product__container-heading-bar">
-                                            <div class="product__container-heading-bar-left sub-primary-color">
-                                            </div>
-                                            <div class="product__container-heading-bar-right primary-color">
-                                                <a href="" class="bar-link">
-                                                    <h3>ĐIỆN THOẠI NỔI BẬT</h3>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="product__container-heading-viewall hide-on-mobile">
-                                            <a href="./listProduct.php" class="link-viewall">
-                                                <span>Xem thêm</span>
-                                                <i class="fa-solid fa-chevron-right"></i>
-                                            </a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 product__container-item">
-                                        <div class="product__container-item-wrapper">
-                                            <a href="#" class="product__container-item-link">
-                                                <div class="product-image">
-                                                    <img src="./assets/images/image-removebg-preview-5.webp" alt="">
-                                                </div>
-                                                <div class="product-info">
-                                                    <a href="#" class="info-link">Camera IP Wifi TP-Link Tapo C200 360°
-                                                        1080P - Chính
-                                                        hãng</a>
-                                                    <span class="info-price">
-                                                            <strong>510,000 ₫</strong>
-                                                            <strike>799,000 ₫</strike>
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                        <?php
+                            }
+                        ?>
+                     
                 </div>
             </div>
         </div>

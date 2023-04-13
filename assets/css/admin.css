@@ -50,37 +50,83 @@ header {
 
 .sidebar-workspace-item {
     display: none;
+    position: relative;
 }
 
 .sidebar-workspace-item.showItem {
-    display: block;
-}
-
-#category {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.wrapper-workspace {
 
-    text-align: center;
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .4);
+    transform: scale(0);
+}
+
+.shadow.form-show {
+    transform: scale(1);
+}
+
+.btn-add-cate {
+    background-color: chocolate;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
 }
 
 .category-heading {
     padding: 24px;
 }
 
-.form-category {
+
+form.form-category {
+    position: absolute;
+    top: 30%;
+    left: 25%;
     text-align: left;
-    padding: 24px;
+    padding: 46px 24px 30px;
     background-color: #7fd6cb;
+    border-radius: 10px;
+    transition: all linear .3s;
+    z-index: 500;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.form-category.form-show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.btn-close-form {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #fff;
+    color: black;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.btn-close-form i {
+    margin: 0;
+    padding: 0;
 }
 
 .form-category label {
-    width: 200px;
-    font-size: 24px;
+    width: 160px;
+    font-size: 18px;
 }
 
 .form-category input {
@@ -89,11 +135,45 @@ header {
 }
 
 .btn-add {
-    padding: 12px 40px;
+    padding: 8px 40px;
     font-size: 20px;
     color: white;
     border-radius: 6px;
     background-color: #009a82;
     margin-top: 16px;
+    float: right;
 
+}
+
+#category-list {
+    border-collapse: collapse;
+    margin-top: 30px;
+
+}
+
+#category-list th {
+    background-color: #009a82;
+}
+
+#category-list td, th {
+    padding: 10px 16px;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+#category-list a {
+    padding: 5px 16px;
+    border-radius: 5px;
+}
+
+#category-list a:first-child {
+    background-color: rgb(5, 105, 211);
+    color: #fff;
+}
+
+#category-list a:last-child {
+    background-color: rgb(237, 47, 9);
+    color: #fff;
 }

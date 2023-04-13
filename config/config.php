@@ -5,8 +5,12 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+
+
 require 'vendor/autoload.php';
-require_once './models/Category.php';
+require_once 'models/Category.php';
+
+
 
 define('HOST', '127.0.0.1');
 define('USER', 'root');
